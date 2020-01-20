@@ -31,7 +31,7 @@
     }
     
     public function regist($user,$pass,$name){
-         $sql = "INSERT INTO `member`(`name`, `user`, `pass`,) VALUES ('".$name."','".$user."','".$pass."')";
+         $sql = "INSERT INTO `mem`(`name`, `user`, `pass`,) VALUES ('".$name."','".$user."','".$pass."')";
          if(mysqli_query($this->connichdb(),$sql))
          {
              //echo 'Register OK';
