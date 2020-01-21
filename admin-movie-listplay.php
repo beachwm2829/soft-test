@@ -109,16 +109,16 @@ and open the template in the editor.
                     <h2 class="text-center mt-0">เพิ่มข้อมูลหนัง</h2>
                     <hr class="divider my-4">
                     
-<!--                    <div class="row">
+                    <div class="row">
                         <div class="col-sm-4"></div>
                         <div class="col-sm-7">
                             <div class="form-group">
-                                <label>เพิ่มรูปตัวอย่างหนัง</label>
-                                <input type="file" id="BSbtndanger" >
+                                <label>เพิ่มลิงค์รูปตัวอย่างหนัง</label>
+                                <input type="text" id="BSbtndanger" name="link">
                                 
                             </div>
                         </div>
-                    </div>-->
+                    </div>
 
                     <div class="row">
                         <div class="col-sm-4"></div>

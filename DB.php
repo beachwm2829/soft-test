@@ -104,9 +104,9 @@
          }
      }
      
-     public function addmovice($mvn,$di,$dt,$tm,$gm)
+     public function addmovice($mvn,$di,$dt,$tm,$gm,$lk)
      {
-         $sql = "INSERT INTO `movice`(`mvName`, `mvDate`, `mvDetail`, `mvTime`, `mvg`) VALUES ('".$mvn."','".$di."','".$dt."','".$tm."','".$gm."')";
+         $sql = "INSERT INTO `movice`(`mvName`, `mvDate`, `mvDetail`, `mvTime`, `mvg`,mvImage) VALUES ('".$mvn."','".$di."','".$dt."','".$tm."','".$gm."','".$lk."')";
          $result = mysqli_query($this->connichdb(), $sql);
          header("location:admin-movie-listplay.php");
      }
