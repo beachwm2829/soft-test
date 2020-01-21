@@ -35,7 +35,7 @@
          if(mysqli_query($this->connichdb(),$sql))
          {
              //echo 'Register OK';
-            header("location:loginpage.php");
+            header("location:login.php");
          }
         else{ echo "Connet F<br>";
         echo $sql;
