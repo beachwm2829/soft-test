@@ -112,38 +112,44 @@ and open the template in the editor.
                                                 <!-- section นี้ เป็น ลิสหนัง -->
                                                 <section class="dorne-about-area section-padding-0-100">
                                                     <div class="container">
-                                                        <div class="row">
-                                                            <div class="col-12">
-                                                                <div class="about-content text-center">
-                                                                    <h2>รายการหนัง <br><span>...</span></h2>
-                                                                    <div class="card" style="width:1100px" align="center">
-                                                                        <div class="row">
-                                                                            <div class="col"><div class="card" style="width:300px" >
-                                                                                    <img class="card-img-top" style="width: 80%;"  src="https://lh3.googleusercontent.com/aEnQt6hTypHo1B3O86mF4F6FOfR1pwnPNRuNBPrfg0XVchMm5tEuBr0MtF7CWGl5X3A5Se7awA7HVv_zYZfx=w260" alt="Card image">
-                                                                                    <div class="card-body">
-                                                                                        <h4 class="card-title">ยิปมัน 4 เดอะไฟนอล</h4>
-                                                                                        <p class="card-text">วันที่เข้าฉาย: 2020-01-12</p>
-                                                                                    </div>
-                                                                                </div></div>
-                                                                            <div class="col"><div class="card" style="width:300px" >
-                                                                                    <img class="card-img-top" style="width: 80%;"  src="https://lh3.googleusercontent.com/AWae8iwbYz1O9K6pUBQFJ2gAIrAY8ypeVY8cD1L_hN1ZM3-76efm6Z8Pdpp2n4zDtj8qXQWZNRLCe8AHu_9w=w260" alt="Card image">
-                                                                                    <div class="card-body">
-                                                                                        <h4 class="card-title">แวนการ์ด หน่วยพิทักษ์ฟัดข้ามโลก</h4>
-                                                                                        <p class="card-text">วันที่เข้าฉาย: 2020-01-25</p>
-                                                                                    </div>
-                                                                                </div></div>
-                                                                            <div class="col"><div class="card" style="width:300px" >
-                                                                                    <img class="card-img-top" style="width: 80%;"  src="https://lh3.googleusercontent.com/0yomwb6GNWTfY4bb0ac3X1gOXUxSdW7NW6SioqVUZe3FJt_czsGVhpCMRBhQCI5u6NVvjpkQAYTUND6Jw_5M=w260" alt="Card image">
-                                                                                    <div class="card-body">
-                                                                                        <h4 class="card-title">แฟร์เวล มาย คองคิวไบน์</h4>
-                                                                                        <p class="card-text">วันที่เข้าฉาย: 2020-01-30</p>
-                                                                                    </div>
-                                                                                </div></div>
+                                                        <form action='chair.php' method='POST'>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <div class="about-content text-center">
+                                                                        <h2>รายการหนัง</h2>
+                                                                        <div class="card" style="width:1100px" align="center">
+                                                                            <div class="row">
+                                                                                <div class="col">
+                                                                                    <a href="chair.php">
+                                                                                        <div class="card" style="width:300px"  >
+                                                                                            <img class="card-img-top" style="width: 80%;"  src="https://lh3.googleusercontent.com/aEnQt6hTypHo1B3O86mF4F6FOfR1pwnPNRuNBPrfg0XVchMm5tEuBr0MtF7CWGl5X3A5Se7awA7HVv_zYZfx=w260" alt="Card image">
+                                                                                            <div class="card-body">
+                                                                                                <h4 class="card-title" href="chair.php">ยิปมัน 4 เดอะไฟนอล</h4>
+                                                                                                <p class="card-text">วันที่เข้าฉาย: 2020-01-12</p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </div>
+                                                                                <div class="col"><a href="chair.php"><div class="card" style="width:300px" >
+                                                                                            <img class="card-img-top" style="width: 80%;"  src="https://lh3.googleusercontent.com/AWae8iwbYz1O9K6pUBQFJ2gAIrAY8ypeVY8cD1L_hN1ZM3-76efm6Z8Pdpp2n4zDtj8qXQWZNRLCe8AHu_9w=w260" alt="Card image">
+                                                                                            <div class="card-body">
+                                                                                                <h4 class="card-title">แวนการ์ด หน่วยพิทักษ์ฟัดข้ามโลก</h4>
+                                                                                                <p class="card-text">วันที่เข้าฉาย: 2020-01-25</p>
+                                                                                            </div>
+                                                                                        </div> </a></div>
+                                                                                <div class="col"><a href="chair.php"><div class="card" style="width:300px" >
+                                                                                            <img class="card-img-top" style="width: 80%;"  src="https://lh3.googleusercontent.com/0yomwb6GNWTfY4bb0ac3X1gOXUxSdW7NW6SioqVUZe3FJt_czsGVhpCMRBhQCI5u6NVvjpkQAYTUND6Jw_5M=w260" alt="Card image">
+                                                                                            <div class="card-body">
+                                                                                                <h4 class="card-title">แฟร์เวล มาย คองคิวไบน์</h4>
+                                                                                                <p class="card-text">วันที่เข้าฉาย: 2020-01-30</p>
+                                                                                            </div>
+                                                                                        </div> </a></div>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
+                                                        </form>
                                                     </div>
                                                 </section>
                                                 <div class="dorne-clients-area section-padding-100">
