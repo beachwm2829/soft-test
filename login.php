@@ -43,7 +43,7 @@
                         </span>
 
                         <span class="login100-form-title p-b-34 p-t-27">
-                            Log in
+                            KAREE CINIMA
                         </span>
 
                         <div class="wrap-input100 validate-input" data-validate="Enter username">
@@ -59,20 +59,26 @@
                         <div class="contact100-form-checkbox">
                             <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
                             <label class="label-checkbox100" for="ckb1">
-                                Remember me
+                                จำรหัสผ่าน
                             </label>
                         </div>
 
                         <div class="container-login100-form-btn">
                             <button class="login100-form-btn">
-                                Login
+                                เข้าสู่ระบบ
                             </button>
                         </div>
     </form>
     
                         <div class="text-center p-t-90">
+                            <a class="txt1" href="registerpage.php">
+                                สมัครสมาชิก
+                            </a>
+                            <a class="txt1">
+                                   ||   
+                            </a>
                             <a class="txt1" href="#">
-                                Forgot Password?
+                                ลืมรหัสผ่าน?
                             </a>
                         </div>
                     </form>
