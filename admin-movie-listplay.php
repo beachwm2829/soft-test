@@ -103,7 +103,7 @@ and open the template in the editor.
                                                 </div>
                                                 </section>
         
-        <form action='sentaddmovice.php' >
+        <form action='sentaddmovice.php' method='POST' >
             <section class="page-section collapse" id="addDatamovie">
                 <div class="container">
                     <h2 class="text-center mt-0">เพิ่มข้อมูลหนัง</h2>
@@ -162,6 +162,7 @@ and open the template in the editor.
                             </div>
                         </div>
                     </div>
+
                     <div class="row">
                         <div class="col-sm-5"></div>
                         <div class="col-sm-7">
@@ -170,6 +171,7 @@ and open the template in the editor.
                             </div>
                         </div>
                     </div>
+
                 </div>
             </section>
         </form>
