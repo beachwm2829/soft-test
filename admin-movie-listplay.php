@@ -29,6 +29,9 @@ and open the template in the editor.
 </head>
 
 <body>
+    <form>
+        
+    </form>
     <?php
     include './navigation/navbar.php';
     ?>
@@ -152,8 +155,8 @@ and open the template in the editor.
                 <div class="col-sm-4"></div>
                 <div class="col-sm-7">
                     <div class="form-group ">
-                        <label for="usr">ผู้กำกับ</label>
-                        <input type="text" align="center" style="width: 50%;" class="form-control" name="pro_movie" id="usr">
+                        <label for="usr">ลายละเอียดหยัง</label>
+                        <input type="text" align="center" style="width: 50%;" class="form-control" name="detail" id="usr">
                     </div>
                 </div>
             </div>
