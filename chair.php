@@ -7,26 +7,50 @@ and open the template in the editor.
 <html>
 
 <head>
+    <?php 
+        session_start();
+        error_reporting(E_ALL^E_NOTICE);
+        require_once './DB.php';
+        $con = new connectdb();
+            if($con ->connichdb()){
+                $sql_user = "SELECT * FROM `seat`";
+                $objquery = mysqli_query($con->connichdb(), $sql_user);
+            }
+    ?>
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Dorne- Directory &amp; Listing Template</title>
     <link rel="icon" href="img/core-img/favicon.ico">
     <link href="style.css" rel="stylesheet">
     <link href="css/responsive/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/seat-css/seat-css.css" title="style1">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/minty/bootstrap.min.css" rel="stylesheet" integrity="sha384-9NlqO4dP5KfioUGS568UFwM3lbWf3Uj3Qb7FBHuIuhLoDp3ZgAqPE1/MYLEBPZYM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <title>หน้าแรก | KAREE Cinema</title>
+
+   
+    <title>เลือกที่นั่ง | KAREE Cinema</title>
     <style>
         .mySlides {
             display: none;
+        } 
+        .btn-submit {
+            background-color: #008CBA;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
         }
     </style>
+    
 </head>
 
 <body>
@@ -59,7 +83,7 @@ and open the template in the editor.
                         <div class="container">
                             <h2>เลือกที่นั่ง</h2>
                             <br>
-                            <div class="card" style="width:1200px;">
+                            <div class="card" style="width:1080px;">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-sm" align="rigth">
@@ -79,10 +103,42 @@ and open the template in the editor.
                             </div>
                             <br><br>
                             <hr>
-                            <div class="card" style="width:1200px">
-
+                            
+                            <div class="card" style="width:1080px">
+                                
                                 <div class="card-body">
                                     <h4 class="card-title">ที่นั่ง</h4>
+                                    <center><form action="checkseat.php" method="post">
+                                    <table>
+                                        <tbody>
+                                            <?php
+                                            echo '<tr>';
+                                            while($row = mysqli_fetch_array($objquery)){
+                                                if($row["sid"]%10 == 0){
+                                                    echo '<td class="row-id">'.$row["sid"].'</td>';
+                                                    echo '<td>';
+                                                        echo '<label class="container1">';
+                                                        echo '<input type="checkbox" name="checkbox[]" value="'.$row['sname'].'">';
+                                                        echo '<span class="checkmark1"></span>';       
+                                                        echo '</label>';
+                                                    echo '</td>';
+                                                    echo '<tr>';
+                                                }else{       
+                                                    echo '<td class="row-id">'.$row["sname"].'</td>';
+                                                    echo '<td>';
+                                                        echo '<label class="container1">';
+                                                        echo '<input type="checkbox" name="checkbox[]" value="'.$row['sname'].'">';
+                                                        echo '<span class="checkmark1"></span>';       
+                                                        echo '</label>';
+                                                echo '</td>';
+                                                }
+                                            }
+                                            echo '</tr>';
+                                            ?>
+                                        </tbody>
+                                    </table>
+                                        <input class="btn-submit" type="submit" value="ดำเนินการต่อ">
+                                    </form></center>
                                 </div>
                             </div>
                         </div>

@@ -7,6 +7,9 @@ and open the template in the editor.
 <html>
 
 <head>
+    <?php 
+        session_start();
+    ?>
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -85,7 +88,16 @@ and open the template in the editor.
                                             </div>
                                             <div class="row">
                                                 <div class="col-sm-6">
-                                                    <h3 style="color: black">D3,D4</h3>
+                                                    <?php 
+                                                    echo '<h3 style="color: black">';
+                                                    for ($i=0;$i<count($_SESSION['seatname']);$i++){
+                                                        echo $_SESSION['seatname'][$i];
+                                                        if($i != count($_SESSION['seatname'])-1){
+                                                            echo ',';
+                                                        }    
+                                                    }
+                                                    
+                                                    echo '</h3>'; ?>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <h4>520 บาท</h4>
