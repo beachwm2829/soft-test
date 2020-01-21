@@ -38,8 +38,9 @@
             <div class="row h-100 align-items-center justify-content-center">
                 <div class="wrap-login100">
                     <form class="login100-form validate-form">
-                        <span class="login100-form-logo">
-                            <i class="zmdi zmdi-landscape"></i>
+                        <span class="login100-form-logoC">
+                            <img src="img/logo-cinema.png" style="width: 100px;">
+<!--                            <i class="zmdi zmdi-landscape"></i>-->
                         </span>
 
                         <span class="login100-form-title p-b-34 p-t-27">
