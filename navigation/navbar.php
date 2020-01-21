@@ -1,25 +1,44 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-<!--           <image src="imgaes/logo1.png" style="width: 120px; height: 65px; margin-right: 30px; margin-left: 20px;">-->
-  <div class="collapse navbar-collapse" id="navbarColor02">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-          <a class="nav-link" href="#" style="font-weight: bold; ">หน้าแรก <span class="sr-only">(current)</span></a>
-      </li> 
-      <li class="nav-item">
-          <a class="nav-link" href="#" style="font-weight: bold;">ภาพยนตร์</a>
-      </li>    
-      <li class="nav-item">
-        <a class="nav-link" href="#" style="font-weight: bold;">โรงภาพยนตร์</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" style="font-weight: bold;">โปรโมชั่น</a>
-      </li>
-    </ul>
-    <a href="login.php">
-        <button class="btn my-2 my-sm-0 fa fa-user-circle" style="color: #fd9b30;font-size:30px;">
-<!--            <image src="imgaes/login.png" />-->
-            <h5 class="nav" style="color: #fd9b30">เข้าสู่ระบบ/สมัครสมาชิก</h5>
-        </button>
-    </a>
+<header class="header_area" id="header">
+  <div class="container-fluid h-100">
+    <div class="row h-100">
+      <div class="col-12 h-100">
+        <nav class="h-100 navbar navbar-expand-lg">
+          <a class="navbar-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
+          <!-- Nav -->
+          <div class="collapse navbar-collapse" id="dorneNav">
+            <ul class="navbar-nav mr-auto" id="dorneMenu">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.php">หน้าแรก <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ภาพยนตร์</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="movie-on.php">กำลังฉาย</a>
+                  <a class="dropdown-item" href="movie-list.php">โปรแกรมล่วงหน้า</a>
+
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link " href="#">โรงภาพยนตร์ </a>
+
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">โปรโมชั่น</a>
+              </li>
+            </ul>
+            <!-- Search btn -->
+
+            <!-- Signin btn -->
+            <div class="dorne-signin-btn">
+              <!-- D:\Bitnami\apache2\htdocs\softtesst\navigation\login.php -->
+              <a href="login.php">เข้าสู่ระบบ</a>
+            </div>
+            <!-- Add listings btn -->
+
+          </div>
+        </nav>
+      </div>
+    </div>
   </div>
-</nav>
+</header>

@@ -5,7 +5,7 @@
         <script src="script.js">
         
         </script>
-        <title>LOGIN PAGE</title>
+        <title>หน้าเข้าสู่สมาชิก | KAREE Cinema</title>
     </head>
     <body background="logoV.png">
     <center><div class="login-page" >
