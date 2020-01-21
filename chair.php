@@ -108,37 +108,137 @@ and open the template in the editor.
                                 
                                 <div class="card-body">
                                     <h4 class="card-title">ที่นั่ง</h4>
-                                    <center><form action="checkseat.php" method="post">
-                                    <table>
+                                    <form action="checkseat.php" method="post">
+                                        <center><table>
                                         <tbody>
+                                            <tr>
+                                                <td>
+                                                    <label class="container1">
+                                                        <input type="checkbox" name="checkbox[]" value="A1">
+                                                        <span class="checkmark1"></span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <label class="container1">
+                                                        <input type="checkbox" name="checkbox[]" value="A2">
+                                                        <span class="checkmark1"></span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <label class="container1">
+                                                        <input type="checkbox" name="checkbox[]" value="A3">
+                                                        <span class="checkmark1"></span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <label class="container1">
+                                                        <input type="checkbox" name="checkbox[]" value="A4">
+                                                        <span class="checkmark1"></span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <label class="container1">
+                                                        <input type="checkbox" name="checkbox[]" value="A5">
+                                                        <span class="checkmark1"></span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <label class="container1">
+                                                        <input type="checkbox" name="checkbox[]" value="A6">
+                                                        <span class="checkmark1"></span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <label class="container1">
+                                                        <input type="checkbox" name="checkbox[]" value="A7">
+                                                        <span class="checkmark1"></span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <label class="container1">
+                                                        <input type="checkbox" name="checkbox[]" value="A8">
+                                                        <span class="checkmark1"></span>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label class="container1">
+                                                        <input type="checkbox" name="checkbox[]" value="B1">
+                                                        <span class="checkmark1"></span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <label class="container1">
+                                                        <input type="checkbox" name="checkbox[]" value="B2">
+                                                        <span class="checkmark1"></span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <label class="container1">
+                                                        <input type="checkbox" name="checkbox[]" value="B3">
+                                                        <span class="checkmark1"></span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <label class="container1">
+                                                        <input type="checkbox" name="checkbox[]" value="B4">
+                                                        <span class="checkmark1"></span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <label class="container1">
+                                                        <input type="checkbox" name="checkbox[]" value="B5">
+                                                        <span class="checkmark1"></span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <label class="container1">
+                                                        <input type="checkbox" name="checkbox[]" value="B6">
+                                                        <span class="checkmark1"></span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <label class="container1">
+                                                        <input type="checkbox" name="checkbox[]" value="B7">
+                                                        <span class="checkmark1"></span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <label class="container1">
+                                                        <input type="checkbox" name="checkbox[]" value="B8">
+                                                        <span class="checkmark1"></span>
+                                                    </label>
+                                                </td>
+                                            </tr>
                                             <?php
-                                            echo '<tr>';
-                                            while($row = mysqli_fetch_array($objquery)){
-                                                if($row["sid"]%10 == 0){
-                                                    echo '<td class="row-id">'.$row["sid"].'</td>';
-                                                    echo '<td>';
-                                                        echo '<label class="container1">';
-                                                        echo '<input type="checkbox" name="checkbox[]" value="'.$row['sname'].'">';
-                                                        echo '<span class="checkmark1"></span>';       
-                                                        echo '</label>';
-                                                    echo '</td>';
-                                                    echo '<tr>';
-                                                }else{       
-                                                    echo '<td class="row-id">'.$row["sname"].'</td>';
-                                                    echo '<td>';
-                                                        echo '<label class="container1">';
-                                                        echo '<input type="checkbox" name="checkbox[]" value="'.$row['sname'].'">';
-                                                        echo '<span class="checkmark1"></span>';       
-                                                        echo '</label>';
-                                                echo '</td>';
-                                                }
-                                            }
-                                            echo '</tr>';
+//                                            echo '<tr>';
+//                                            while($row = mysqli_fetch_array($objquery)){                                  
+//                                                if($row["sid"]%10 == 0){
+//                                                    echo '<td class="row-id">'.$row["sid"].'</td>';
+//                                                    echo '<td>';
+//                                                        echo '<label class="container1">';
+//                                                        echo '<input type="checkbox" name="checkbox[]" value="'.$row['sname'].'">';
+//                                                        echo '<span class="checkmark1"></span>';       
+//                                                        echo '</label>';
+//                                                    echo '</td>';
+//                                                    echo '<tr>';
+//                                                }else{       
+//                                                    echo '<td class="row-id">'.$row["sname"].'</td>';
+//                                                    echo '<td>';
+//                                                        echo '<label class="container1">';
+//                                                        echo '<input type="checkbox" name="checkbox[]" value="'.$row['sname'].'">';
+//                                                        echo '<span class="checkmark1"></span>';       
+//                                                        echo '</label>';
+//                                                echo '</td>';
+//                                                }
+//                                            }
+//                                            echo '</tr>';
                                             ?>
                                         </tbody>
                                     </table>
-                                        <input class="btn-submit" type="submit" value="ดำเนินการต่อ">
-                                    </form></center>
+                                        <input class="btn btn-primary btn-lg" type="submit" value="ดำเนินการต่อ"></center>
+                                    </form>
                                 </div>
                             </div>
                         </div>

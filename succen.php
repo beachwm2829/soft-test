@@ -70,14 +70,14 @@ and open the template in the editor.
                                         <div class="col-sm" align="rigth">
                                             <img src="https://lh3.googleusercontent.com/AWae8iwbYz1O9K6pUBQFJ2gAIrAY8ypeVY8cD1L_hN1ZM3-76efm6Z8Pdpp2n4zDtj8qXQWZNRLCe8AHu_9w=w260" class="rounded" alt="Cinque Terre">
                                         </div>
-                                        <div class="col-sm" align="left">
+                                        <form action="checksuccen.php" method="post"><div class="col-sm" align="left">
                                             <br><br><br><br><br>
-                                            <h3 style="color: black">แวนการ์ด หน่วยพิทักษ์ฟัดข้ามโลก</h3>
+                                            <h3 style="color: black" name="movie">แวนการ์ด หน่วยพิทักษ์ฟัดข้ามโลก</h3>
                                             <!--ชิ่อหนัง -->
-                                            <h6 style="color: blue">25 มกราคม 2020 | 16 : 20</h6>
+                                            <h6 style="color: blue" name="timeshow">25 มกราคม 2020 | 16 : 20</h6>
                                             <!--วัน - เวลา -->
-                                            <h6 style="color: blue"><span class="glyphicon glyphicon-map-marker"></span> เอส เอฟ เวิลด์ ซีเนม่า เซ็นทรัลเวิลด์</h6>
                                             <h4 style="color: black">โรงภาพยนต์</h4>
+                                            <h6 style="color: blue" name="cinema"><span class="glyphicon glyphicon-map-marker"></span> เอส เอฟ เวิลด์ ซีเนม่า เซ็นทรัลเวิลด์</h6>
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                     <h3 style="color: black">ที่นั่งที่เลือก</h3>
@@ -89,7 +89,7 @@ and open the template in the editor.
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                     <?php 
-                                                    echo '<h3 style="color: black">';
+                                                    echo '<h3 style="color: black" name="seat">';
                                                     for ($i=0;$i<count($_SESSION['seatname']);$i++){
                                                         echo $_SESSION['seatname'][$i];
                                                         if($i != count($_SESSION['seatname'])-1){
@@ -102,7 +102,7 @@ and open the template in the editor.
                                                 <div class="col-sm-6">
                                                     <?php 
                                                     $price = 0;
-                                                    echo '<h4 style="color: black">';
+                                                    echo '<h4 style="color: black" name="price">';
                                                     for ($i=0;$i<count($_SESSION['seatname']);$i++){
                                                         $price =  $price + 80;
                                                     }
@@ -110,8 +110,8 @@ and open the template in the editor.
                                                     echo '</h4>'; ?>
                                                 </div>
                                             </div>
-                                            <button type="button" class="btn btn-primary btn-lg btn-block" >ชำระเงิน</button>
-                                        </div>
+                                            <input class="btn btn-primary btn-lg" type="submit" value="ชำระเงิน">
+                                        </div></form>
                                     </div>
                                 </div>
                             </div>
