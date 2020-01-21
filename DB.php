@@ -42,4 +42,28 @@
         }
      }
      
+     public function addpoint($mid,$point)
+     {
+         $sql = "SELECT * FROM `mem` WHERE mid='".$mid."'";
+         $result = mysqli_query($this->connichdb(), $sql);
+         if(mysqli_num_rows($result)==1)
+             {
+                $row= mysqli_fetch_array($result);
+                //session_start();
+                $num=$row['mPoint'];
+                echo $num;
+                $Sum = $num+$point;
+                $sql = "UPDATE `mem` SET `mPoint` = ".$Sum." WHERE `mid` = ".$mid." ";
+                $result = mysqli_query($this->connichdb(), $sql);
+                //UPDATE `mem` SET`mPoint`=100 WHERE `mid` = 2
+                echo $sql;
+                echo 'ADD POINT OK';
+            }
+         else{
+//             echo"Login Eror<br>";
+             echo $sql;
+             header("location:login.php");
+         }
+     }
+     
 }
