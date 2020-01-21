@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html>
 
 <head>
@@ -34,7 +29,8 @@ and open the template in the editor.
 </head>
 
 <body>
-    <?php
+    <form action='sentlogin.php' method='POST'>
+        <?php
     include './navigation/navbar.php';
     ?>
     <div class="limiter">
@@ -51,7 +47,7 @@ and open the template in the editor.
                         </span>
 
                         <div class="wrap-input100 validate-input" data-validate="Enter username">
-                            <input class="input100" type="text" name="username" placeholder="Username">
+                            <input class="input100" type="text" name="user" placeholder="Username">
                             <span class="focus-input100" data-placeholder="&#xf207;"></span>
                         </div>
 
@@ -72,7 +68,8 @@ and open the template in the editor.
                                 Login
                             </button>
                         </div>
-
+    </form>
+    
                         <div class="text-center p-t-90">
                             <a class="txt1" href="#">
                                 Forgot Password?
