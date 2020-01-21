@@ -50,9 +50,6 @@ and open the template in the editor.
     </head>
 
     <body>
-        <form>
-
-        </form>
         <?php
         include './navigation/navbar.php';
         ?>
@@ -153,134 +150,114 @@ and open the template in the editor.
                                                         </div>
                                                         </section>
 
-                                                        <form action='sentaddmovice.php' method='POST' >
-                                                            <section class="page-section collapse" id="addDatamovie">
-                                                                <div class="container">
-                                                                    <h2 class="text-center mt-0">เพิ่มPoint</h2>
-                                                                    <hr class="divider my-4">
-                                                                    <!--                    <div class="row">
-                                                                                            <div class="col-sm-4"></div>
-                                                                                            <div class="col-sm-7">
-                                                                                                <div class="form-group">
-                                                                                                    <label>เพิ่มรูปตัวอย่างหนัง</label>
-                                                                                                    <input type="file" id="BSbtndanger">
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>-->
-                                                                    <div class="row">
-                                                                        <div class="col-sm-4"></div>
-                                                                        <div class="col-sm-7">
-                                                                            <div class="form-group ">
-                                                                                <label for="usr">Usernames</label>
-                                                                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="USER ID" name='mid'>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="row">
-                                                                        <div class="col-sm-4"></div>
-                                                                        <div class="col-sm-7">
-                                                                            <div class="form-group ">
-                                                                                <label for="usr">Point</label>
-                                                                                <input type="text" align="center" style="width: 50%;" class="form-control" placeholder='POINT' name='point'>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="row">
-                                                                        <div class="col-sm-5"></div>
-                                                                        <div class="col-sm-7">
-                                                                            <div class="form-group ">
-                                                                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="เพิ่มPoint">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </section>
-                                                        </form>
+        <form action='sentpoint.php' method='POST' >
+            <section class="page-section collapse" id="addDatamovie">
+                <div class="container">
+                    <h2 class="text-center mt-0">เพิ่มPoint</h2>
+                    <hr class="divider my-4">
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <label for="usr">Usernames</label>
+                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="USER ID" name='mid'>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <label for="usr">Point</label>
+                                <input type="text" align="center" style="width: 50%;" class="form-control" placeholder='POINT' name='point'>
+                            </div>
+                        </div>
+                    </div>
 
-                                                        <section class="page-section collapse" id="DeleteDatamovie">
-                                                            <div class="container">
-                                                                <h2 class="text-center mt-0">ลบPoint</h2>
-                                                                <hr class="divider my-4">
-                                                                <!--                    <div class="row">
-                                                                                        <div class="col-sm-4"></div>
-                                                                                        <div class="col-sm-7">
-                                                                                            <div class="form-group">
-                                                                                                <label>เพิ่มรูปตัวอย่างหนัง</label>
-                                                                                                <input type="file" id="BSbtndanger">
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>-->
-                                                                <div class="row">
-                                                                    <div class="col-sm-4"></div>
-                                                                    <div class="col-sm-7">
-                                                                        <div class="form-group ">
-                                                                            <label for="usr">Username</label>
-                                                                            <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="USER ID" name='mid'>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-sm-4"></div>
-                                                                    <div class="col-sm-7">
-                                                                        <div class="form-group ">
-                                                                            <label for="usr">point</label>
-                                                                            <input type="text" align="center" style="width: 50%;" class="form-control" placeholder='POINT' name='point'>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-sm-5"></div>
-                                                                    <div class="col-sm-7">
-                                                                        <div class="form-group ">
-                                                                            <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="ลบPoint">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                    <div class="row">
+                        <div class="col-sm-5"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="เพิ่มPoint">
+                            </div>
+                        </div>
+                    </div>
 
-                                                        </section>
-                                                        <section class="page-section collapse" id="EditDatamovie">
-                                                            <div class="container">
-                                                                <h2 class="text-center mt-0">แก้ไขPoint</h2>
-                                                                <hr class="divider my-4">
-                                                                <!--                    <div class="row">
-                                                                                        <div class="col-sm-4"></div>
-                                                                                        <div class="col-sm-7">
-                                                                                            <div class="form-group">
-                                                                                                <label>เพิ่มรูปตัวอย่างหนัง</label>
-                                                                                                <input type="file" id="BSbtndanger">
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>-->
-                                                                <div class="row">
-                                                                    <div class="col-sm-4"></div>
-                                                                    <div class="col-sm-7">
-                                                                        <div class="form-group ">
-                                                                            <label for="usr">Username</label>
-                                                                            <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="USER ID" name='mid'>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-sm-4"></div>
-                                                                    <div class="col-sm-7">
-                                                                        <div class="form-group ">
-                                                                            <label for="usr">Point</label>
-                                                                            <input type="text" align="center" style="width: 50%;" class="form-control" placeholder='POINT' name='point'>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-sm-5"></div>
-                                                                    <div class="col-sm-7">
-                                                                        <div class="form-group ">
-                                                                            <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="แก้ไขPoint">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </section>
+                </div>
+            </section>
+        </form>
+
+        <form action='sentdeletepoint.php' method='POST'>
+            <section class="page-section collapse" id="DeleteDatamovie">
+                <div class="container">
+                    <h2 class="text-center mt-0">ลบPoint</h2>
+                    <hr class="divider my-4">
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <label for="usr">Username</label>
+                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="USER ID" name='mid'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <label for="usr">point</label>
+                                <input type="text" align="center" style="width: 50%;" class="form-control" placeholder='POINT' name='point'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="ลบPoint">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </form>
+                                                        
+        <form action='senteditpoint.php' method='POST'>
+            <section class="page-section collapse" id="EditDatamovie">
+                <div class="container">
+                    <h2 class="text-center mt-0">แก้ไขPoint</h2>
+                    <hr class="divider my-4">
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <label for="usr">Username</label>
+                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="USER ID" name='mid'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <label for="usr">Point</label>
+                                <input type="text" align="center" style="width: 50%;" class="form-control" placeholder='POINT' name='point'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="แก้ไขPoint">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </form>
+                                                        
                                                         <div class="dorne-clients-area section-padding-100">
                                                             <div class="container-fluid">
                                                                 <div class="row">

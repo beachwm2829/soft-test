@@ -54,25 +54,53 @@
      
      public function addpoint($mid,$point)
      {
-         $sql = "SELECT * FROM `mem` WHERE mid='".$mid."'";
+         $sql = "SELECT * FROM `member` WHERE mid='".$mid."'";
          $result = mysqli_query($this->connichdb(), $sql);
          if(mysqli_num_rows($result)==1)
              {
                 $row= mysqli_fetch_array($result);
-                //session_start();
                 $num=$row['mPoint'];
                 echo $num;
                 $Sum = $num+$point;
-                $sql = "UPDATE `mem` SET `mPoint` = ".$Sum." WHERE `mid` = ".$mid." ";
+                $sql = "UPDATE `member` SET `mPoint` = ".$Sum." WHERE `mid` = ".$mid." ";
                 $result = mysqli_query($this->connichdb(), $sql);
-                //UPDATE `mem` SET`mPoint`=100 WHERE `mid` = 2
-                echo $sql;
-                echo 'ADD POINT OK';
+                header("location:addpoint.php");
             }
          else{
-//             echo"Login Eror<br>";
              echo $sql;
-             header("location:login.php");
+         }
+     }
+     
+     public function deletepoint($mid,$point)
+     {
+         $sql = "SELECT * FROM `member` WHERE mid='".$mid."'";
+         $result = mysqli_query($this->connichdb(), $sql);
+         if(mysqli_num_rows($result)==1)
+             {
+                $row= mysqli_fetch_array($result);
+                $num=$row['mPoint'];
+                $Sum = $num-$point;
+                $sql = "UPDATE `member` SET `mPoint` = ".$Sum." WHERE `mid` = ".$mid." ";
+                $result = mysqli_query($this->connichdb(), $sql);
+                header("location:addpoint.php");
+            }
+         else{
+             echo $sql;
+         }
+     }
+     
+     public function editpoint($mid,$point)
+     {
+         $sql = "SELECT * FROM `member` WHERE mid='".$mid."'";
+         $result = mysqli_query($this->connichdb(), $sql);
+         if(mysqli_num_rows($result)==1)
+             {
+                $sql = "UPDATE `member` SET `mPoint` = ".$point." WHERE `mid` = ".$mid." ";
+                $result = mysqli_query($this->connichdb(), $sql);
+                header("location:addpoint.php");
+            }
+         else{
+             echo $sql;
          }
      }
      
