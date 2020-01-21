@@ -108,15 +108,18 @@ and open the template in the editor.
                 <div class="container">
                     <h2 class="text-center mt-0">เพิ่มข้อมูลหนัง</h2>
                     <hr class="divider my-4">
+                    
 <!--                    <div class="row">
                         <div class="col-sm-4"></div>
                         <div class="col-sm-7">
                             <div class="form-group">
                                 <label>เพิ่มรูปตัวอย่างหนัง</label>
-                                <input type="file" id="BSbtndanger">
+                                <input type="file" id="BSbtndanger" >
+                                
                             </div>
                         </div>
                     </div>-->
+
                     <div class="row">
                         <div class="col-sm-4"></div>
                         <div class="col-sm-7">
@@ -176,24 +179,26 @@ and open the template in the editor.
             </section>
         </form>
                                                 
-        
-                                                <section class="page-section collapse" id="DeleteDatamovie">
-                                                    <div align="center">
-                                                        <div class="card-body row no-gutters " style="width: 400px;">
+        <form action='sentdeletemovice.php' method='POST'>
+            <section class="page-section collapse" id="DeleteDatamovie">
+                <div align="center">
+                    <div class="card-body row no-gutters " style="width: 470px;">
 
-                                                            <!--end of col-->
-                                                            <div class="col">
-                                                                <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search topics or keywords">
-                                                            </div>
-                                                            <!--end of col-->
-                                                            <div class="col-auto">
-                                                                <button class="btn btn-lg btn-success" type="submit">Search</button>
-                                                            </div>
-                                                            <!--end of col-->
-                                                        </div>
-                                                    </div>
-
-                                                </section>
+                        <!--end of col-->
+                        <div class="col">
+<!--                            <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Enter Movicename for Delete" name="delet">-->
+                            <input type="text" align="center" style="width: 80%;" class="form-control" placeholder="Enter Movicename for Delete" name="delete" id="usr">
+                        </div>
+                        <!--end of col-->
+                        <div class="col-auto">
+                            <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="Delete">
+                        </div>
+                        <!--end of col-->
+                    </div>
+                </div>
+            </section>
+        </form>
+                                                
                                                 <section class="page-section collapse" id="EditDatamovie">
                                                     <div align="center">
                                                         <div class="card-body row no-gutters align-items-center"style="width: 400px;" >
