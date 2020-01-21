@@ -26,6 +26,9 @@
         <title>Register</title>
     </head>
     <body>
+        <script src="js/block.js">
+            
+        </script>
     <form action='sentregister.php' method='POST' name="formjs">
         <?php
     include './navigation/navbar.php';
@@ -57,7 +60,7 @@
                             <span class="focus-input100" data-placeholder="&#xf206;"></span>
                         </div>
                         <div class="container-login100-form-btn">
-                            <button class="login100-form-btn">
+                            <button class="login100-form-btn" action='' onclick="return azz()">
                                 ยืนยันการสมัคร
                             </button>
                         </div>

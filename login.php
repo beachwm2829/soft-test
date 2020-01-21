@@ -29,7 +29,10 @@
 </head>
 
 <body>
-    <form action='sentlogin.php' method='POST'>
+    <script src="js/block.js">
+            
+    </script>
+    <form action='sentlogin.php' method='POST' name="formjs">
         <?php
     include './navigation/navbar.php';
     ?>
@@ -64,7 +67,7 @@
                         </div>
 
                         <div class="container-login100-form-btn">
-                            <button class="login100-form-btn">
+                            <button class="login100-form-btn" action='' onclick="return login()">
                                 เข้าสู่ระบบ
                             </button>
                         </div>
