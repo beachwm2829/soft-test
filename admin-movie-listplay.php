@@ -81,6 +81,8 @@ and open the template in the editor.
                                                 </div>
                                                 </div>
                                                 </div>
+                                                
+                                                
                                                 <div class="container">
                                                     <div class="row">
                                                         <div class="col-12">
@@ -100,75 +102,79 @@ and open the template in the editor.
                                                     </div>
                                                 </div>
                                                 </section>
-                                                <section class="page-section collapse" id="addDatamovie">
-                                                    <div class="container">
-                                                        <h2 class="text-center mt-0">เพิ่มข้อมูลหนัง</h2>
-                                                        <hr class="divider my-4">
-                                                        <div class="row">
-                                                            <div class="col-sm-4"></div>
-                                                            <div class="col-sm-7">
-                                                                <div class="form-group">
-                                                                    <label>เพิ่มรูปตัวอย่างหนัง</label>
-                                                                    <input type="file" id="BSbtndanger">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-sm-4"></div>
-                                                            <div class="col-sm-7">
-                                                                <div class="form-group ">
-                                                                    <label for="usr">ชื่อหนัง</label>
-                                                                    <input type="text" align="center" style="width: 50%;" class="form-control" name="Moviename" id="usr">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-sm-4"></div>
-                                                            <div class="col-sm-7">
-                                                                <div class="form-group ">
-                                                                    <label for="usr">วันที่เข้าฉาย</label>
-                                                                    <input type="text" align="center" style="width: 50%;" class="form-control" name="Date_in" id="usr">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-sm-4"></div>
-                                                            <div class="col-sm-7">
-                                                                <div class="form-group ">
-                                                                    <label for="usr">ลายละเอียดหยัง</label>
-                                                                    <input type="text" align="center" style="width: 50%;" class="form-control" name="detail" id="usr">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-sm-4"></div>
-                                                            <div class="col-sm-7">
-                                                                <div class="form-group ">
-                                                                    <label for="usr">เวลาหนัง</label>
-                                                                    <input type="text" align="center" style="width: 50%;" class="form-control" name="time_movie" id="usr">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-sm-4"></div>
-                                                            <div class="col-sm-7">
-                                                                <div class="form-group ">
-                                                                    <label for="usr">หมวดหมู่</label>
-                                                                    <input type="text" align="center" style="width: 50%;" class="form-control" name="group_movie" id="usr">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-sm-5"></div>
-                                                            <div class="col-sm-7">
-                                                                <div class="form-group ">
-                                                                    <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="Send">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                </section>
+        
+        <form action='sentaddmovice.php' >
+            <section class="page-section collapse" id="addDatamovie">
+                <div class="container">
+                    <h2 class="text-center mt-0">เพิ่มข้อมูลหนัง</h2>
+                    <hr class="divider my-4">
+<!--                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group">
+                                <label>เพิ่มรูปตัวอย่างหนัง</label>
+                                <input type="file" id="BSbtndanger">
+                            </div>
+                        </div>
+                    </div>-->
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <label for="usr">ชื่อหนัง</label>
+                                <input type="text" align="center" style="width: 50%;" class="form-control" name="Moviename" id="usr">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <label for="usr">วันที่เข้าฉาย</label>
+                                <input type="text" align="center" style="width: 50%;" class="form-control" name="Date_in" id="usr">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <label for="usr">ลายละเอียดหยัง</label>
+                                <input type="text" align="center" style="width: 50%;" class="form-control" name="detail" id="usr">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <label for="usr">เวลาหนัง</label>
+                                <input type="text" align="center" style="width: 50%;" class="form-control" name="time_movie" id="usr">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <label for="usr">หมวดหมู่</label>
+                                <input type="text" align="center" style="width: 50%;" class="form-control" name="group_movie" id="usr">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="Send">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </form>
+                                                
+        
                                                 <section class="page-section collapse" id="DeleteDatamovie">
                                                     <div align="center">
                                                         <div class="card-body row no-gutters " style="width: 400px;">
