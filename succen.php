@@ -100,7 +100,14 @@ and open the template in the editor.
                                                     echo '</h3>'; ?>
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <h4>520 บาท</h4>
+                                                    <?php 
+                                                    $price = 0;
+                                                    echo '<h4 style="color: black">';
+                                                    for ($i=0;$i<count($_SESSION['seatname']);$i++){
+                                                        $price =  $price + 80;
+                                                    }
+                                                    echo $price;
+                                                    echo '</h4>'; ?>
                                                 </div>
                                             </div>
                                             <button type="button" class="btn btn-primary btn-lg btn-block" >ชำระเงิน</button>
