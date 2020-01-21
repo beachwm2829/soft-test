@@ -80,6 +80,14 @@
      {
          $sql = "INSERT INTO `movice`(`mvName`, `mvDate`, `mvDetail`, `mvTime`, `mvg`) VALUES ('".$mvn."','".$di."','".$dt."','".$tm."','".$gm."')";
          $result = mysqli_query($this->connichdb(), $sql);
+         header("location:admin-movie-listplay.php");
+     }
+     
+     public function delete($del)
+     {
+         $sql = "DELETE FROM `movice` WHERE `mvName` = '".$del."'";
+         $result = mysqli_query($this->connichdb(), $sql);
+         header("location:admin-movie-listplay.php");
      }
      
 }
