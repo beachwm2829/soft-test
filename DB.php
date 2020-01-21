@@ -12,16 +12,26 @@
         return $conn;        
     }
     public function checkdb($user,$pass){
-         $sql = "SELECT * FROM `mem` WHERE mUser='".$user."' AND mPass='".$pass."'";
+         $sql = "SELECT * FROM `member` WHERE mUser='".$user."' AND mPass='".$pass."'";
          $result = mysqli_query($this->connichdb(), $sql);
          if(mysqli_num_rows($result)==1)
              {
                 echo 'Login OK!!!';
+                $row= mysqli_fetch_array($result);
+                //session_start();
+                $p=$row['mPosition'];
+                //echo $p;
                 //$row= mysqli_fetch_array($result);
                 //session_start();
                 //$_SESSION['mUser']=$row['mName'];
-                
-                //header("location:memberpage.php");//หน้าสมาชิก
+                if($p == 'Member')
+                {
+                    header("location:chair.php");
+                }
+                else
+                {
+                    header("location:admin-movie-listplay.php");
+                }
             }
          else{
 //             echo"Login Eror<br>";
@@ -31,7 +41,7 @@
     }
     
     public function regist($User,$Pass,$Name){
-         $sql = "INSERT INTO `mem`(`mUser`, `mPass`, `mName`) VALUES ('".$User."','".$Pass."','".$Name."')";
+         $sql = "INSERT INTO `member`(`mUser`, `mPass`, `mName`, `mPosition`) VALUES ('".$User."','".$Pass."','".$Name."','Member')";
          if(mysqli_query($this->connichdb(),$sql))
          {
              //echo 'Register OK';
@@ -64,6 +74,12 @@
              echo $sql;
              header("location:login.php");
          }
+     }
+     
+     public function addmovice($mvn,$di,$dt,$tm,$gm)
+     {
+         $sql = "INSERT INTO `movice`(`mvName`, `mvDate`, `mvDetail`, `mvTime`, `mvg`) VALUES ('".$mvn."','".$di."','".$dt."','".$tm."','".$gm."')";
+         $result = mysqli_query($this->connichdb(), $sql);
      }
      
 }
