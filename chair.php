@@ -108,6 +108,7 @@ and open the template in the editor.
                                 <?php 
                                 while($row = mysqli_fetch_array($objquery)){
                                     $str = explode(",", $row["seat"]);
+                                    echo $str;
                                     for($i=0;$i<count($str);$i++){
                                         echo $str[$i];
                                     }
