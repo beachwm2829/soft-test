@@ -13,7 +13,7 @@ and open the template in the editor.
         require_once './DB.php';
         $con = new connectdb();
             if($con ->connichdb()){
-                $sql_user = "SELECT * FROM `seat`";
+                $sql_user = "SELECT * FROM `ticket`";
                 $objquery = mysqli_query($con->connichdb(), $sql_user);
             }
     ?>
@@ -105,7 +105,20 @@ and open the template in the editor.
                             <hr>
                             
                             <div class="card" style="width:1080px">
+                                <?php 
+                                while($row = mysqli_fetch_array($objquery)){
+                                    $str = explode(",", $row["seat"]);
+                                    for($i=0;$i<count($str);$i++){
+                                        echo $str[$i];
+                                    }
+                                }
                                 
+                                //$str = explode(",", $row["seat"]);
+//                                echo count($row["seat"]);
+//                                echo $str[0];
+//                                echo $str[1]; 
+                                
+                                ?>
                                 <div class="card-body">
                                     <h4 class="card-title">ที่นั่ง</h4>
                                     <form action="checkseat.php" method="post">
@@ -114,104 +127,263 @@ and open the template in the editor.
                                             <tr>
                                                 <td>
                                                     <label class="container1">
-                                                        <input type="checkbox" name="checkbox[]" value="A1">
-                                                        <span class="checkmark1"></span>
+                                                        <?php 
+                                                        if($str[$i] == "A1"){
+                                                            echo '<input type="checkbox" name="checkbox[]" value="A1" checked="checked" disabled>';
+                                                            echo '<span class="checkmark2"></span>';
+                                                        }else{
+                                                            echo '<input type="checkbox" name="checkbox[]" value="A1">';
+                                                            echo '<span class="checkmark1"></span>';
+                                                        }      
+                                                        ?>
                                                     </label>
                                                 </td>
                                                 <td>
                                                     <label class="container1">
-                                                        <input type="checkbox" name="checkbox[]" value="A2">
-                                                        <span class="checkmark1"></span>
+                                                        <?php 
+                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        if($str[$i] == "A2"){
+                                                            echo '<input type="checkbox" name="checkbox[]" value="A2" checked="checked" disabled>';
+                                                            echo '<span class="checkmark2"></span>';
+                                                            break;
+                                                        }else{
+                                                            echo '<input type="checkbox" name="checkbox[]" value="A2">';
+                                                            echo '<span class="checkmark1"></span>';
+                                                        }   
+                                                        }    
+                                                        ?>
+                                                        
                                                     </label>
                                                 </td>
                                                 <td>
                                                     <label class="container1">
-                                                        <input type="checkbox" name="checkbox[]" value="A3">
-                                                        <span class="checkmark1"></span>
+                                                        <?php 
+                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        if($str[$i] == "A3"){
+                                                            echo '<input type="checkbox" name="checkbox[]" value="A3" checked="checked" disabled>';
+                                                            echo '<span class="checkmark2"></span>';
+                                                            break;
+                                                        }else{
+                                                            echo '<input type="checkbox" name="checkbox[]" value="A3">';
+                                                            echo '<span class="checkmark1"></span>';
+                                                        }   
+                                                        }      
+                                                        ?>
                                                     </label>
                                                 </td>
                                                 <td>
                                                     <label class="container1">
-                                                        <input type="checkbox" name="checkbox[]" value="A4">
-                                                        <span class="checkmark1"></span>
+                                                        <?php 
+                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        if($str[$i] == "A4"){
+                                                            echo '<input type="checkbox" name="checkbox[]" value="A4" checked="checked" disabled>';
+                                                            echo '<span class="checkmark2"></span>';
+                                                            break;
+                                                        }else{
+                                                            echo '<input type="checkbox" name="checkbox[]" value="A4">';
+                                                            echo '<span class="checkmark1"></span>';
+                                                        }   
+                                                        }      
+                                                        ?>
                                                     </label>
                                                 </td>
                                                 <td>
                                                     <label class="container1">
-                                                        <input type="checkbox" name="checkbox[]" value="A5">
-                                                        <span class="checkmark1"></span>
+                                                        <?php 
+                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        if($str[$i] == "A5"){
+                                                            echo '<input type="checkbox" name="checkbox[]" value="A5" checked="checked" disabled>';
+                                                            echo '<span class="checkmark2"></span>';
+                                                            break;
+                                                        }else{
+                                                            echo '<input type="checkbox" name="checkbox[]" value="A5">';
+                                                            echo '<span class="checkmark1"></span>';
+                                                        }   
+                                                        }      
+                                                        ?>
                                                     </label>
                                                 </td>
                                                 <td>
                                                     <label class="container1">
-                                                        <input type="checkbox" name="checkbox[]" value="A6">
-                                                        <span class="checkmark1"></span>
+                                                        <?php 
+                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        if($str[$i] == "A6"){
+                                                            echo '<input type="checkbox" name="checkbox[]" value="A6" checked="checked" disabled>';
+                                                            echo '<span class="checkmark2"></span>';
+                                                            break;
+                                                        }else{
+                                                            echo '<input type="checkbox" name="checkbox[]" value="A6">';
+                                                            echo '<span class="checkmark1"></span>';
+                                                        }   
+                                                        }      
+                                                        ?>
                                                     </label>
                                                 </td>
                                                 <td>
                                                     <label class="container1">
-                                                        <input type="checkbox" name="checkbox[]" value="A7">
-                                                        <span class="checkmark1"></span>
+                                                        <?php 
+                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        if($str[$i] == "A7"){
+                                                            echo '<input type="checkbox" name="checkbox[]" value="A7" checked="checked" disabled>';
+                                                            echo '<span class="checkmark2"></span>';
+                                                            break;
+                                                        }else{
+                                                            echo '<input type="checkbox" name="checkbox[]" value="A7">';
+                                                            echo '<span class="checkmark1"></span>';
+                                                        }   
+                                                        }      
+                                                        ?>
                                                     </label>
                                                 </td>
                                                 <td>
                                                     <label class="container1">
-                                                        <input type="checkbox" name="checkbox[]" value="A8">
-                                                        <span class="checkmark1"></span>
+                                                        <?php 
+                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        if($str[$i] == "A8"){
+                                                            echo '<input type="checkbox" name="checkbox[]" value="A8" checked="checked" disabled>';
+                                                            echo '<span class="checkmark2"></span>';
+                                                            break;
+                                                        }else{
+                                                            echo '<input type="checkbox" name="checkbox[]" value="A8">';
+                                                            echo '<span class="checkmark1"></span>';
+                                                        }   
+                                                        }      
+                                                        ?>
                                                     </label>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
                                                     <label class="container1">
-                                                        <input type="checkbox" name="checkbox[]" value="B1">
-                                                        <span class="checkmark1"></span>
+                                                       <?php 
+                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        if($str[$i] == "B1"){
+                                                            echo '<input type="checkbox" name="checkbox[]" value="B1" checked="checked" disabled>';
+                                                            echo '<span class="checkmark2"></span>';
+                                                            break;
+                                                        }else{
+                                                            echo '<input type="checkbox" name="checkbox[]" value="B1">';
+                                                            echo '<span class="checkmark1"></span>';
+                                                        }   
+                                                        }      
+                                                        ?>
                                                     </label>
                                                 </td>
                                                 <td>
                                                     <label class="container1">
-                                                        <input type="checkbox" name="checkbox[]" value="B2">
-                                                        <span class="checkmark1"></span>
+                                                        <?php 
+                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        if($str[$i] == "B2"){
+                                                            echo '<input type="checkbox" name="checkbox[]" value="B2" checked="checked" disabled>';
+                                                            echo '<span class="checkmark2"></span>';
+                                                            break;
+                                                        }else{
+                                                            echo '<input type="checkbox" name="checkbox[]" value="B2">';
+                                                            echo '<span class="checkmark1"></span>';
+                                                        }   
+                                                        }      
+                                                        ?>
                                                     </label>
                                                 </td>
                                                 <td>
                                                     <label class="container1">
-                                                        <input type="checkbox" name="checkbox[]" value="B3">
-                                                        <span class="checkmark1"></span>
+                                                        <?php 
+                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        if($str[$i] == "B3"){
+                                                            echo '<input type="checkbox" name="checkbox[]" value="B3" checked="checked" disabled>';
+                                                            echo '<span class="checkmark2"></span>';
+                                                            break;
+                                                        }else{
+                                                            echo '<input type="checkbox" name="checkbox[]" value="B3">';
+                                                            echo '<span class="checkmark1"></span>';
+                                                        }   
+                                                        }      
+                                                        ?>
                                                     </label>
                                                 </td>
                                                 <td>
                                                     <label class="container1">
-                                                        <input type="checkbox" name="checkbox[]" value="B4">
-                                                        <span class="checkmark1"></span>
+                                                        <?php 
+                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        if($str[$i] == "B4"){
+                                                            echo '<input type="checkbox" name="checkbox[]" value="B4" checked="checked" disabled>';
+                                                            echo '<span class="checkmark2"></span>';
+                                                            break;
+                                                        }else{
+                                                            echo '<input type="checkbox" name="checkbox[]" value="B4">';
+                                                            echo '<span class="checkmark1"></span>';
+                                                        }   
+                                                        }      
+                                                        ?>
                                                     </label>
                                                 </td>
                                                 <td>
                                                     <label class="container1">
-                                                        <input type="checkbox" name="checkbox[]" value="B5">
-                                                        <span class="checkmark1"></span>
+                                                        <?php 
+                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        if($str[$i] == "B5"){
+                                                            echo '<input type="checkbox" name="checkbox[]" value="B5" checked="checked" disabled>';
+                                                            echo '<span class="checkmark2"></span>';
+                                                            break;
+                                                        }else{
+                                                            echo '<input type="checkbox" name="checkbox[]" value="B5">';
+                                                            echo '<span class="checkmark1"></span>';
+                                                        }   
+                                                        }      
+                                                        ?>
                                                     </label>
                                                 </td>
                                                 <td>
                                                     <label class="container1">
-                                                        <input type="checkbox" name="checkbox[]" value="B6">
-                                                        <span class="checkmark1"></span>
+                                                        <?php 
+                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        if($str[$i] == "B6"){
+                                                            echo '<input type="checkbox" name="checkbox[]" value="B6" checked="checked" disabled>';
+                                                            echo '<span class="checkmark2"></span>';
+                                                            break;
+                                                        }else{
+                                                            echo '<input type="checkbox" name="checkbox[]" value="B6">';
+                                                            echo '<span class="checkmark1"></span>';
+                                                        }   
+                                                        }      
+                                                        ?>
                                                     </label>
                                                 </td>
                                                 <td>
                                                     <label class="container1">
-                                                        <input type="checkbox" name="checkbox[]" value="B7">
-                                                        <span class="checkmark1"></span>
+                                                        <?php 
+                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        if($str[$i] == "B7"){
+                                                            echo '<input type="checkbox" name="checkbox[]" value="B7" checked="checked" disabled>';
+                                                            echo '<span class="checkmark2"></span>';
+                                                            break;
+                                                        }else{
+                                                            echo '<input type="checkbox" name="checkbox[]" value="B7">';
+                                                            echo '<span class="checkmark1"></span>';
+                                                        }   
+                                                        }      
+                                                        ?>
                                                     </label>
                                                 </td>
                                                 <td>
                                                     <label class="container1">
-                                                        <input type="checkbox" name="checkbox[]" value="B8">
-                                                        <span class="checkmark1"></span>
+                                                       <?php 
+                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        if($str[$i] == "B8"){
+                                                            echo '<input type="checkbox" name="checkbox[]" value="B8" checked="checked" disabled>';
+                                                            echo '<span class="checkmark2"></span>';
+                                                            break;
+                                                        }else{
+                                                            echo '<input type="checkbox" name="checkbox[]" value="B8">';
+                                                            echo '<span class="checkmark1"></span>';
+                                                        }   
+                                                        }      
+                                                        ?>
                                                     </label>
                                                 </td>
-                                            </tr>
+                                            </tr>    
                                             <?php
+                              
 //                                            echo '<tr>';
 //                                            while($row = mysqli_fetch_array($objquery)){                                  
 //                                                if($row["sid"]%10 == 0){
