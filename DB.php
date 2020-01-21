@@ -16,10 +16,10 @@
          $result = mysqli_query($this->connichdb(), $sql);
          if(mysqli_num_rows($result)==1)
              {
-                  
-                $row= mysqli_fetch_array($result);
-                session_start();
-                $_SESSION['mUser']=$row['mName'];
+                echo 'Login OK!!!';
+                //$row= mysqli_fetch_array($result);
+                //session_start();
+                //$_SESSION['mUser']=$row['mName'];
                 
                 //header("location:memberpage.php");//หน้าสมาชิก
             }
@@ -30,12 +30,12 @@
          }
     }
     
-    public function regist($user,$pass,$name){
-         $sql = "INSERT INTO `mem`(`name`, `user`, `pass`,) VALUES ('".$name."','".$user."','".$pass."')";
+    public function regist($User,$Pass,$Name){
+         $sql = "INSERT INTO `mem`(`mUser`, `mPass`, `mName`) VALUES ('".$User."','".$Pass."','".$Name."')";
          if(mysqli_query($this->connichdb(),$sql))
          {
              //echo 'Register OK';
-            header("location:login.php");
+            header("location:loginpage.php");
          }
         else{ echo "Connet F<br>";
         echo $sql;
@@ -43,4 +43,3 @@
      }
      
 }
-     
