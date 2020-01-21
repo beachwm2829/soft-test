@@ -118,4 +118,34 @@
          header("location:admin-movie-listplay.php");
      }
      
+     public function checkmv($tg) {
+        $sql = "SELECT * FROM `movice` WHERE mvName='" . $tg . "'";
+        $result = mysqli_query($this->connichdb(), $sql);
+        if (mysqli_num_rows($result) == 1) {
+            $row = mysqli_fetch_array($result);
+            //session_start();
+            $_SESSION['mvn']=$row['mvName'];
+            $_SESSION['mvda']=$row['mvDate'];
+            $_SESSION['mvde']=$row['mvDetail'];
+            $_SESSION['mvt']=$row['mvTime'];
+            $_SESSION['mvg']=$row['mvg'];
+            $_SESSION['mvi']=$row['mvImage'];
+            //echo $p;
+            //$row= mysqli_fetch_array($result);
+            //session_start();
+            //$_SESSION['mUser']=$row['mName'];
+            
+            //header("location:editmovicepage.php");
+            
+            echo $_SESSION['mvn'];echo '<br>';            
+            echo $_SESSION['mvda'];echo '<br>';
+            echo $_SESSION['mvde'];echo '<br>';
+            echo $_SESSION['mvt'];echo '<br>';
+            echo $_SESSION['mvg'];echo '<br>';
+            echo $_SESSION['mvi'];
+        } else {
+             header("location:admin-movie-listplay.php");
+        }
+    }
+
 }
