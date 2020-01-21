@@ -16,7 +16,6 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="movie-on.php">กำลังฉาย</a>
                   <a class="dropdown-item" href="movie-list.php">โปรแกรมล่วงหน้า</a>
-
                 </div>
               </li>
               <li class="nav-item dropdown">
