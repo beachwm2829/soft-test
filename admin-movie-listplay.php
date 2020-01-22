@@ -33,7 +33,7 @@ and open the template in the editor.
 
         </form>
         <?php
-        include './navigation/navbar.php';
+        include './navigation/navbar_admin.php';
         ?>
         <!-- section นี้ เป็น ลิสหนัง -->
         <section class="dorne-about-area section-padding-0-100">
@@ -87,7 +87,7 @@ and open the template in the editor.
                                                     <div class="row">
                                                         <div class="col-12">
                                                             <div class="about-content text-center">
-                                                                <h2>โปรแกรมหนัง <br>
+                                                                <h2>จัดการโปรแกรมหนัง <br>
                                                                     <div class="row">
                                                                         <div class="col" align="right"><button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#addDatamovie">เพิ่มหนัง +</button></div>
                                                                         <div class="col"align="center"><button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#DeleteDatamovie">ลบหนัง -</button></div>

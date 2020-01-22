@@ -51,7 +51,14 @@ and open the template in the editor.
 
     <body>
         <?php
-        include './navigation/navbar.php';
+        include './navigation/navbar_admin.php';
+        $dbhost = "localhost";
+        $dbuser = "root";
+        $dbpassword = "";
+        $db = "db_tester";
+        $conn = new mysqli($dbhost, $dbuser, $dbpassword, $db)or
+                die("Connect failed: %s\n" . $conn->erro);
+        mysqli_set_charset($conn, "utf8");
         ?>
         <!-- section นี้ เป็น ลิสหนัง -->
         <section class="dorne-about-area section-padding-0-100">
@@ -110,23 +117,29 @@ and open the template in the editor.
                                                                         <th>Point</th>
                                                                     </tr>
                                                                 </thead>
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td>John</td>
-                                                                        <td>Doe</td>
-                                                                        <td>100</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Mary</td>
-                                                                        <td>Moe</td>
-                                                                        <td>200</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>July</td>
-                                                                        <td>Dooley</td>
-                                                                        <td>3000</td>
-                                                                    </tr>
-                                                                </tbody>
+                                                                <?php
+                                                                $sql = "SELECT * FROM `member`where mPosition = 'Member'";
+                                                                $result = mysqli_query($conn, $sql);
+
+                                                                $num = 3;
+                                                                while ($row = mysqli_fetch_array($result)) {
+//                                                                                echo $row["mvImage"];
+                                                                    ?>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td><?php echo $row["mUser"]; ?></td>
+
+
+                                                                            <td><?php echo $row["mName"]; ?></td>
+
+
+                                                                            <td><?php echo $row["mPoint"]; ?></td>
+                                                                        </tr>
+
+                                                                    </tbody>
+                                                                    <?php
+                                                                }
+                                                                ?>
                                                             </table>
                                                         </div>
 
@@ -150,114 +163,114 @@ and open the template in the editor.
                                                         </div>
                                                         </section>
 
-        <form action='sentpoint.php' method='POST' >
-            <section class="page-section collapse" id="addDatamovie">
-                <div class="container">
-                    <h2 class="text-center mt-0">เพิ่มPoint</h2>
-                    <hr class="divider my-4">
-                    <div class="row">
-                        <div class="col-sm-4"></div>
-                        <div class="col-sm-7">
-                            <div class="form-group ">
-                                <label for="usr">Usernames</label>
-                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="USER ID" name='mid'>
-                            </div>
-                        </div>
-                    </div>
+                                                        <form action='sentpoint.php' method='POST' >
+                                                            <section class="page-section collapse" id="addDatamovie">
+                                                                <div class="container">
+                                                                    <h2 class="text-center mt-0">เพิ่มPoint</h2>
+                                                                    <hr class="divider my-4">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-4"></div>
+                                                                        <div class="col-sm-7">
+                                                                            <div class="form-group ">
+                                                                                <label for="usr">Usernames</label>
+                                                                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="USER ID" name='mid'>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
 
-                    <div class="row">
-                        <div class="col-sm-4"></div>
-                        <div class="col-sm-7">
-                            <div class="form-group ">
-                                <label for="usr">Point</label>
-                                <input type="text" align="center" style="width: 50%;" class="form-control" placeholder='POINT' name='point'>
-                            </div>
-                        </div>
-                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-sm-4"></div>
+                                                                        <div class="col-sm-7">
+                                                                            <div class="form-group ">
+                                                                                <label for="usr">Point</label>
+                                                                                <input type="text" align="center" style="width: 50%;" class="form-control" placeholder='POINT' name='point'>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
 
-                    <div class="row">
-                        <div class="col-sm-5"></div>
-                        <div class="col-sm-7">
-                            <div class="form-group ">
-                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="เพิ่มPoint">
-                            </div>
-                        </div>
-                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-sm-5"></div>
+                                                                        <div class="col-sm-7">
+                                                                            <div class="form-group ">
+                                                                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="เพิ่มPoint">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
 
-                </div>
-            </section>
-        </form>
+                                                                </div>
+                                                            </section>
+                                                        </form>
 
-        <form action='sentdeletepoint.php' method='POST'>
-            <section class="page-section collapse" id="DeleteDatamovie">
-                <div class="container">
-                    <h2 class="text-center mt-0">ลบPoint</h2>
-                    <hr class="divider my-4">
-                    <div class="row">
-                        <div class="col-sm-4"></div>
-                        <div class="col-sm-7">
-                            <div class="form-group ">
-                                <label for="usr">Username</label>
-                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="USER ID" name='mid'>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4"></div>
-                        <div class="col-sm-7">
-                            <div class="form-group ">
-                                <label for="usr">point</label>
-                                <input type="text" align="center" style="width: 50%;" class="form-control" placeholder='POINT' name='point'>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-5"></div>
-                        <div class="col-sm-7">
-                            <div class="form-group ">
-                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="ลบPoint">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </form>
-                                                        
-        <form action='senteditpoint.php' method='POST'>
-            <section class="page-section collapse" id="EditDatamovie">
-                <div class="container">
-                    <h2 class="text-center mt-0">แก้ไขPoint</h2>
-                    <hr class="divider my-4">
-                    <div class="row">
-                        <div class="col-sm-4"></div>
-                        <div class="col-sm-7">
-                            <div class="form-group ">
-                                <label for="usr">Username</label>
-                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="USER ID" name='mid'>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4"></div>
-                        <div class="col-sm-7">
-                            <div class="form-group ">
-                                <label for="usr">Point</label>
-                                <input type="text" align="center" style="width: 50%;" class="form-control" placeholder='POINT' name='point'>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-5"></div>
-                        <div class="col-sm-7">
-                            <div class="form-group ">
-                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="แก้ไขPoint">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </form>
-                                                        
+                                                        <form action='sentdeletepoint.php' method='POST'>
+                                                            <section class="page-section collapse" id="DeleteDatamovie">
+                                                                <div class="container">
+                                                                    <h2 class="text-center mt-0">ลบPoint</h2>
+                                                                    <hr class="divider my-4">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-4"></div>
+                                                                        <div class="col-sm-7">
+                                                                            <div class="form-group ">
+                                                                                <label for="usr">Username</label>
+                                                                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="USER ID" name='mid'>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-sm-4"></div>
+                                                                        <div class="col-sm-7">
+                                                                            <div class="form-group ">
+                                                                                <label for="usr">point</label>
+                                                                                <input type="text" align="center" style="width: 50%;" class="form-control" placeholder='POINT' name='point'>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-sm-5"></div>
+                                                                        <div class="col-sm-7">
+                                                                            <div class="form-group ">
+                                                                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="ลบPoint">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </section>
+                                                        </form>
+
+                                                        <form action='senteditpoint.php' method='POST'>
+                                                            <section class="page-section collapse" id="EditDatamovie">
+                                                                <div class="container">
+                                                                    <h2 class="text-center mt-0">แก้ไขPoint</h2>
+                                                                    <hr class="divider my-4">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-4"></div>
+                                                                        <div class="col-sm-7">
+                                                                            <div class="form-group ">
+                                                                                <label for="usr">Username</label>
+                                                                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="USER ID" name='mid'>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-sm-4"></div>
+                                                                        <div class="col-sm-7">
+                                                                            <div class="form-group ">
+                                                                                <label for="usr">Point</label>
+                                                                                <input type="text" align="center" style="width: 50%;" class="form-control" placeholder='POINT' name='point'>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-sm-5"></div>
+                                                                        <div class="col-sm-7">
+                                                                            <div class="form-group ">
+                                                                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="แก้ไขPoint">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </section>
+                                                        </form>
+
                                                         <div class="dorne-clients-area section-padding-100">
                                                             <div class="container-fluid">
                                                                 <div class="row">
