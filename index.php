@@ -31,6 +31,13 @@ and open the template in the editor.
     <body>
         <?php
         include './navigation/navbar.php';
+        $dbhost = "localhost";
+        $dbuser = "root";
+        $dbpassword = "";
+        $db = "db_tester";
+        $conn = new mysqli($dbhost, $dbuser, $dbpassword, $db)or
+                die("Connect failed: %s\n" . $conn->erro);
+        mysqli_set_charset($conn, "utf8");
         ?>
 
         <script>
@@ -118,32 +125,47 @@ and open the template in the editor.
                                                                     <div class="about-content text-center">
                                                                         <h2>รายการหนัง</h2>
                                                                         <div class="card" style="width:1100px" align="center">
-                                                                            <div class="row">
-                                                                                <div class="col">
-                                                                                    <a href="chair.php">
-                                                                                        <div class="card" style="width:300px"  >
-                                                                                            <img class="card-img-top" style="width: 80%;"  src="https://lh3.googleusercontent.com/aEnQt6hTypHo1B3O86mF4F6FOfR1pwnPNRuNBPrfg0XVchMm5tEuBr0MtF7CWGl5X3A5Se7awA7HVv_zYZfx=w260" alt="Card image">
-                                                                                            <div class="card-body">
-                                                                                                <h4 class="card-title" href="chair.php">ยิปมัน 4 เดอะไฟนอล</h4>
-                                                                                                <p class="card-text">วันที่เข้าฉาย: 2020-01-12</p>
-                                                                                            </div>
+                                                                            <?php
+                                                                            $sql = "SELECT * FROM `movice`";
+                                                                            $result = mysqli_query($conn, $sql);
+
+                                                                            $num = 3;
+                                                                            while ($row = mysqli_fetch_array($result)) {
+//                                                                                echo $row["mvImage"];
+                                                                                if ($num % 3 == 0) {
+                                                                                    ?>
+                                                                                    <div class="row">
+                                                                                        <div class="col">
+                                                                                            <a href="chair.php">
+                                                                                                <div class="card" style="width:300px"  >
+                                                                                                    <img class="card-img-top" style="width: 80%;"  src="<?php echo $row["mvImage"] ?>" alt="Card image">
+                                                                                                    <div class="card-body">
+                                                                                                        <h4 class="card-title" href="chair.php"><?php echo $row["mvName"] ?></h4>
+                                                                                                        <p class="card-text">วันที่เข้าฉาย: <?php echo $row["mvDate"] ?></p>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </a>
                                                                                         </div>
-                                                                                    </a>
-                                                                                </div>
-                                                                                <div class="col"><a href="chair.php"><div class="card" style="width:300px" >
-                                                                                            <img class="card-img-top" style="width: 80%;"  src="https://lh3.googleusercontent.com/AWae8iwbYz1O9K6pUBQFJ2gAIrAY8ypeVY8cD1L_hN1ZM3-76efm6Z8Pdpp2n4zDtj8qXQWZNRLCe8AHu_9w=w260" alt="Card image">
-                                                                                            <div class="card-body">
-                                                                                                <h4 class="card-title">แวนการ์ด หน่วยพิทักษ์ฟัดข้ามโลก</h4>
-                                                                                                <p class="card-text">วันที่เข้าฉาย: 2020-01-25</p>
-                                                                                            </div>
-                                                                                        </div> </a></div>
-                                                                                <div class="col"><a href="chair.php"><div class="card" style="width:300px" >
-                                                                                            <img class="card-img-top" style="width: 80%;"  src="https://lh3.googleusercontent.com/0yomwb6GNWTfY4bb0ac3X1gOXUxSdW7NW6SioqVUZe3FJt_czsGVhpCMRBhQCI5u6NVvjpkQAYTUND6Jw_5M=w260" alt="Card image">
-                                                                                            <div class="card-body">
-                                                                                                <h4 class="card-title">แฟร์เวล มาย คองคิวไบน์</h4>
-                                                                                                <p class="card-text">วันที่เข้าฉาย: 2020-01-30</p>
-                                                                                            </div>
-                                                                                        </div> </a></div>
+
+                                                                                        <?php
+                                                                                    } else {
+                                                                                        ?>
+                                                                                        <div class="col">
+                                                                                            <a href="chair.php">
+                                                                                                <div class="card" style="width:300px"  >
+                                                                                                    <img class="card-img-top" style="width: 80%;"  src="<?php echo $row["mvImage"] ?>" alt="Card image">
+                                                                                                    <div class="card-body">
+                                                                                                        <h4 class="card-title" href="chair.php"><?php echo $row["mvName"] ?></h4>
+                                                                                                        <p class="card-text">วันที่เข้าฉาย: <?php echo $row["mvDate"] ?></p>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                        <?php
+                                                                                    }
+                                                                                    $num = $num + 1;
+                                                                                }
+                                                                                ?>
                                                                             </div>
                                                                         </div>
                                                                     </div>
