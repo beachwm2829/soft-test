@@ -11,7 +11,6 @@ and open the template in the editor.
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Dorne- Directory &amp; Listing Template</title>
         <link rel="icon" href="img/core-img/favicon.ico">
         <link href="style.css" rel="stylesheet">
         <link href="css/responsive/responsive.css" rel="stylesheet">
@@ -136,11 +135,11 @@ and open the template in the editor.
                                                                                     ?>
                                                                                     <div class="row">
                                                                                         <div class="col">
-                                                                                            <a href="chair.php">
+                                                                                            <?php echo '<a href="showtime.php?m='.$row["mmid"].'">'; ?>
                                                                                                 <div class="card" style="width:300px"  >
                                                                                                     <img class="card-img-top" style="width: 80%;"  src="<?php echo $row["mvImage"] ?>" alt="Card image">
                                                                                                     <div class="card-body">
-                                                                                                        <h4 class="card-title" href="chair.php"><?php echo $row["mvName"] ?></h4>
+                                                                                                        <h4 class="card-title" href="#"><?php echo $row["mvName"] ?></h4>
                                                                                                         <p class="card-text">วันที่เข้าฉาย: <?php echo $row["mvDate"] ?></p>
                                                                                                     </div>
                                                                                                 </div>
@@ -151,11 +150,11 @@ and open the template in the editor.
                                                                                     } else {
                                                                                         ?>
                                                                                         <div class="col">
-                                                                                            <a href="chair.php">
+                                                                                            <?php echo '<a href="showtime.php?m='.$row["mmid"].'">'; ?>
                                                                                                 <div class="card" style="width:300px"  >
                                                                                                     <img class="card-img-top" style="width: 80%;"  src="<?php echo $row["mvImage"] ?>" alt="Card image">
                                                                                                     <div class="card-body">
-                                                                                                        <h4 class="card-title" href="chair.php"><?php echo $row["mvName"] ?></h4>
+                                                                                                        <h4 class="card-title" href="#"><?php echo $row["mvName"] ?></h4>
                                                                                                         <p class="card-text">วันที่เข้าฉาย: <?php echo $row["mvDate"] ?></p>
                                                                                                     </div>
                                                                                                 </div>
