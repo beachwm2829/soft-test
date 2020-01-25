@@ -109,9 +109,9 @@ and open the template in the editor.
                                 while($row = mysqli_fetch_array($objquery)){
                                     $str = explode(",", $row["seat"]);
 //                                    echo $str;
-                                    for($i=0;$i<count($str);$i++){
-//                                        echo $str[$i];
-                                    }
+//                                    for($i=0;$i<count($str);$i++){
+////                                        echo $str[$i];
+//                                    }
                                 }
                                 
                                 //$str = explode(",", $row["seat"]);
@@ -129,6 +129,7 @@ and open the template in the editor.
                                                 <td>
                                                     <label class="container1">
                                                         <?php 
+                                                        for($i=0;$i<=count($str);$i++){
                                                         if($str[$i] == "A1"){
                                                             echo '<input type="checkbox" name="checkbox[]" value="A1" checked="checked" disabled>';
                                                             echo '<span class="checkmark2"></span>';
@@ -136,13 +137,14 @@ and open the template in the editor.
                                                             echo '<input type="checkbox" name="checkbox[]" value="A1">';
                                                             echo '<span class="checkmark1"></span>';
                                                         }      
+                                                        }
                                                         ?>
                                                     </label>
                                                 </td>
                                                 <td>
                                                     <label class="container1">
                                                         <?php 
-                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        for($i=0;$i<=count($str);$i++){
                                                         if($str[$i] == "A2"){
                                                             echo '<input type="checkbox" name="checkbox[]" value="A2" checked="checked" disabled>';
                                                             echo '<span class="checkmark2"></span>';
@@ -159,7 +161,7 @@ and open the template in the editor.
                                                 <td>
                                                     <label class="container1">
                                                         <?php 
-                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        for($i=0;$i<=count($str);$i++){
                                                         if($str[$i] == "A3"){
                                                             echo '<input type="checkbox" name="checkbox[]" value="A3" checked="checked" disabled>';
                                                             echo '<span class="checkmark2"></span>';
@@ -175,7 +177,7 @@ and open the template in the editor.
                                                 <td>
                                                     <label class="container1">
                                                         <?php 
-                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        for($i=0;$i<=count($str);$i++){
                                                         if($str[$i] == "A4"){
                                                             echo '<input type="checkbox" name="checkbox[]" value="A4" checked="checked" disabled>';
                                                             echo '<span class="checkmark2"></span>';
@@ -191,7 +193,7 @@ and open the template in the editor.
                                                 <td>
                                                     <label class="container1">
                                                         <?php 
-                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        for($i=0;$i<=count($str);$i++){
                                                         if($str[$i] == "A5"){
                                                             echo '<input type="checkbox" name="checkbox[]" value="A5" checked="checked" disabled>';
                                                             echo '<span class="checkmark2"></span>';
@@ -207,7 +209,7 @@ and open the template in the editor.
                                                 <td>
                                                     <label class="container1">
                                                         <?php 
-                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        for($i=0;$i<=count($str);$i++){
                                                         if($str[$i] == "A6"){
                                                             echo '<input type="checkbox" name="checkbox[]" value="A6" checked="checked" disabled>';
                                                             echo '<span class="checkmark2"></span>';
@@ -223,7 +225,7 @@ and open the template in the editor.
                                                 <td>
                                                     <label class="container1">
                                                         <?php 
-                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        for($i=0;$i<=count($str);$i++){
                                                         if($str[$i] == "A7"){
                                                             echo '<input type="checkbox" name="checkbox[]" value="A7" checked="checked" disabled>';
                                                             echo '<span class="checkmark2"></span>';
@@ -239,7 +241,7 @@ and open the template in the editor.
                                                 <td>
                                                     <label class="container1">
                                                         <?php 
-                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        for($i=0;$i<=count($str);$i++){
                                                         if($str[$i] == "A8"){
                                                             echo '<input type="checkbox" name="checkbox[]" value="A8" checked="checked" disabled>';
                                                             echo '<span class="checkmark2"></span>';
@@ -257,7 +259,7 @@ and open the template in the editor.
                                                 <td>
                                                     <label class="container1">
                                                        <?php 
-                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        for($i=0;$i<=count($str);$i++){
                                                         if($str[$i] == "B1"){
                                                             echo '<input type="checkbox" name="checkbox[]" value="B1" checked="checked" disabled>';
                                                             echo '<span class="checkmark2"></span>';
@@ -273,7 +275,7 @@ and open the template in the editor.
                                                 <td>
                                                     <label class="container1">
                                                         <?php 
-                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        for($i=0;$i<=count($str);$i++){
                                                         if($str[$i] == "B2"){
                                                             echo '<input type="checkbox" name="checkbox[]" value="B2" checked="checked" disabled>';
                                                             echo '<span class="checkmark2"></span>';
@@ -289,7 +291,7 @@ and open the template in the editor.
                                                 <td>
                                                     <label class="container1">
                                                         <?php 
-                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        for($i=0;$i<=count($str);$i++){
                                                         if($str[$i] == "B3"){
                                                             echo '<input type="checkbox" name="checkbox[]" value="B3" checked="checked" disabled>';
                                                             echo '<span class="checkmark2"></span>';
@@ -305,7 +307,7 @@ and open the template in the editor.
                                                 <td>
                                                     <label class="container1">
                                                         <?php 
-                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        for($i=0;$i<=count($str);$i++){
                                                         if($str[$i] == "B4"){
                                                             echo '<input type="checkbox" name="checkbox[]" value="B4" checked="checked" disabled>';
                                                             echo '<span class="checkmark2"></span>';
@@ -321,7 +323,7 @@ and open the template in the editor.
                                                 <td>
                                                     <label class="container1">
                                                         <?php 
-                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        for($i=0;$i<=count($str);$i++){
                                                         if($str[$i] == "B5"){
                                                             echo '<input type="checkbox" name="checkbox[]" value="B5" checked="checked" disabled>';
                                                             echo '<span class="checkmark2"></span>';
@@ -337,7 +339,7 @@ and open the template in the editor.
                                                 <td>
                                                     <label class="container1">
                                                         <?php 
-                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        for($i=0;$i<=count($str);$i++){
                                                         if($str[$i] == "B6"){
                                                             echo '<input type="checkbox" name="checkbox[]" value="B6" checked="checked" disabled>';
                                                             echo '<span class="checkmark2"></span>';
@@ -353,7 +355,7 @@ and open the template in the editor.
                                                 <td>
                                                     <label class="container1">
                                                         <?php 
-                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        for($i=0;$i<=count($str);$i++){
                                                         if($str[$i] == "B7"){
                                                             echo '<input type="checkbox" name="checkbox[]" value="B7" checked="checked" disabled>';
                                                             echo '<span class="checkmark2"></span>';
@@ -369,7 +371,7 @@ and open the template in the editor.
                                                 <td>
                                                     <label class="container1">
                                                        <?php 
-                                                        for($i=0;$i<=count($row["seat"]);$i++){
+                                                        for($i=0;$i<=count($str);$i++){
                                                         if($str[$i] == "B8"){
                                                             echo '<input type="checkbox" name="checkbox[]" value="B8" checked="checked" disabled>';
                                                             echo '<span class="checkmark2"></span>';
