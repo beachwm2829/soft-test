@@ -185,7 +185,6 @@ and open the template in the editor.
                                                             <div class="col"align="center"><button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#DeleteDatamovie">ลบโปรโมชั่น -</button></div>
                                                             <div class="col"align="left"><button type="button" class="btn btn-warning" data-toggle="collapse" data-target="#EditDatamovie">แก้ไขโปรโมชั่น +</button></div>
                                                         </div>
-
                                                     </div>
                                                     <br>
                                                     <form action='sentaddmovice.php' method='POST' >
