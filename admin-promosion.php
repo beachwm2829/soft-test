@@ -43,9 +43,6 @@ and open the template in the editor.
         <!-- section นี้ เป็น ลิสหนัง -->
         <section class="dorne-about-area section-padding-0-100">
             <div style="background-image: url(img/bg-img/hero1.png);">
-
-
-
                 <div class="container h-100">
                     <div class="row h-100 align-items-center justify-content-center">
                         <div class="col-12 col-md-10">
@@ -140,11 +137,11 @@ and open the template in the editor.
                                                                                 ?>
                                                                                 <div class="row">
                                                                                     <div class="col">
-                                                                                        <a href="chair.php">
+                                                                                        <a href="promotion-page.php">
                                                                                             <div class="card" style="width:300px"  >
                                                                                                 <img class="card-img-top" style="width: 80%;"  src="<?php echo $row["mvImage"] ?>" alt="Card image">
                                                                                                 <div class="card-body">
-                                                                                                    <h4 class="card-title" href="chair.php"><?php echo $row["mvName"] ?></h4>
+                                                                                                    <h4 class="card-title" href="promotion-page.php"><?php echo $row["mvName"] ?></h4>
                                                                                                     <p class="card-text">วันที่เข้าฉาย: <?php echo $row["mvDate"] ?></p>
                                                                                                 </div>
                                                                                             </div>
@@ -155,11 +152,11 @@ and open the template in the editor.
                                                                                 } else {
                                                                                     ?>
                                                                                     <div class="col">
-                                                                                        <a href="chair.php">
+                                                                                        <a href="promotion-page.php">
                                                                                             <div class="card" style="width:300px"  >
                                                                                                 <img class="card-img-top" style="width: 80%;"  src="<?php echo $row["mvImage"] ?>" alt="Card image">
                                                                                                 <div class="card-body">
-                                                                                                    <h4 class="card-title" href="chair.php"><?php echo $row["mvName"] ?></h4>
+                                                                                                    <h4 class="card-title" href="promotion-page.php"><?php echo $row["mvName"] ?></h4>
                                                                                                     <p class="card-text">วันที่เข้าฉาย: <?php echo $row["mvDate"] ?></p>
                                                                                                 </div>
                                                                                             </div>
@@ -208,7 +205,7 @@ and open the template in the editor.
                                                                     <div class="col-sm-4"></div>
                                                                     <div class="col-sm-7">
                                                                         <div class="form-group ">
-                                                                            <label for="usr">ชื่อหนัง</label>
+                                                                            <label for="usr">ชื่อโปรโมชั่น</label>
                                                                             <input type="text" align="center" style="width: 50%;" class="form-control" name="Moviename" id="usr">
                                                                         </div>
                                                                     </div>
@@ -217,7 +214,7 @@ and open the template in the editor.
                                                                     <div class="col-sm-4"></div>
                                                                     <div class="col-sm-7">
                                                                         <div class="form-group ">
-                                                                            <label for="usr">วันที่เข้าฉาย</label>
+                                                                            <label for="usr">รายละเอียดโปรโมชั่น</label>
                                                                             <input type="text" align="center" style="width: 50%;" class="form-control" name="Date_in" id="usr">
                                                                         </div>
                                                                     </div>
@@ -226,7 +223,7 @@ and open the template in the editor.
                                                                     <div class="col-sm-4"></div>
                                                                     <div class="col-sm-7">
                                                                         <div class="form-group ">
-                                                                            <label for="usr">ลายละเอียดหยัง</label>
+                                                                            <label for="usr">ระยะเวลา</label>
                                                                             <input type="text" align="center" style="width: 50%;" class="form-control" name="detail" id="usr">
                                                                         </div>
                                                                     </div>
@@ -235,7 +232,7 @@ and open the template in the editor.
                                                                     <div class="col-sm-4"></div>
                                                                     <div class="col-sm-7">
                                                                         <div class="form-group ">
-                                                                            <label for="usr">เวลาหนัง</label>
+                                                                            <label for="usr">เงื่อนไขการรับสิทธิ์</label>
                                                                             <input type="text" align="center" style="width: 50%;" class="form-control" name="time_movie" id="usr">
                                                                         </div>
                                                                     </div>
@@ -244,7 +241,7 @@ and open the template in the editor.
                                                                     <div class="col-sm-4"></div>
                                                                     <div class="col-sm-7">
                                                                         <div class="form-group ">
-                                                                            <label for="usr">หมวดหมู่</label>
+                                                                            <label for="usr">สาขาที่เข้าร่วม</label>
                                                                             <input type="text" align="center" style="width: 50%;" class="form-control" name="group_movie" id="usr">
                                                                         </div>
                                                                     </div>

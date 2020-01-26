@@ -140,11 +140,11 @@ and open the template in the editor.
                                                                                 ?>
                                                                                 <div class="row">
                                                                                     <div class="col">
-                                                                                        <a href="chair.php">
+                                                                                        <a href="promotion-page.php">
                                                                                             <div class="card" style="width:300px"  >
                                                                                                 <img class="card-img-top" style="width: 80%;"  src="<?php echo $row["mvImage"] ?>" alt="Card image">
                                                                                                 <div class="card-body">
-                                                                                                    <h4 class="card-title" href="chair.php"><?php echo $row["mvName"] ?></h4>
+                                                                                                    <h4 class="card-title" href="promotion-page.php"><?php echo $row["mvName"] ?></h4>
                                                                                                     <p class="card-text">วันที่เข้าฉาย: <?php echo $row["mvDate"] ?></p>
                                                                                                 </div>
                                                                                             </div>
@@ -155,11 +155,11 @@ and open the template in the editor.
                                                                                 } else {
                                                                                     ?>
                                                                                     <div class="col">
-                                                                                        <a href="chair.php">
+                                                                                        <a href="promotion-page.php">
                                                                                             <div class="card" style="width:300px"  >
                                                                                                 <img class="card-img-top" style="width: 80%;"  src="<?php echo $row["mvImage"] ?>" alt="Card image">
                                                                                                 <div class="card-body">
-                                                                                                    <h4 class="card-title" href="chair.php"><?php echo $row["mvName"] ?></h4>
+                                                                                                    <h4 class="card-title" href="promotion-page.php"><?php echo $row["mvName"] ?></h4>
                                                                                                     <p class="card-text">วันที่เข้าฉาย: <?php echo $row["mvDate"] ?></p>
                                                                                                 </div>
                                                                                             </div>
