@@ -19,11 +19,11 @@
                 </div>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link " href="#">โรงภาพยนตร์ </a>
+                <a class="nav-link " href="movie_cenema.php">โรงภาพยนตร์ </a>
 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">โปรโมชั่น</a>
+                <a class="nav-link" href="promotion.php">โปรโมชั่น</a>
               </li>
             </ul>
             <!-- Search btn -->

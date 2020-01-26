@@ -20,7 +20,7 @@
 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">โปรโมชั่น</a>
+                <a class="nav-link" href="admin-promosion.php">จัดการโปรโมชั่น</a>
               </li>
             </ul>
             <!-- Search btn -->
