@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html>
 
     <head>
@@ -184,12 +179,12 @@ and open the template in the editor.
                                                         </div>
                                                     </div>
                                                     <br>
-                                                    <form action='sentaddmovice.php' method='POST' >
+                                                    <form action='sentaddpromo.php' method='POST' >
                                                         <section class="page-section collapse" id="addDatamovie">
                                                             <div class="container">
                                                                 <h2 class="text-center mt-0">เพิ่มข้อมูลโปรโมชั่น</h2>
                                                                 <hr class="divider my-4">
-
+                                                               
                                                                 <div class="row">
                                                                     <div class="col-sm-4"></div>
                                                                     <div class="col-sm-7">
@@ -206,7 +201,7 @@ and open the template in the editor.
                                                                     <div class="col-sm-7">
                                                                         <div class="form-group ">
                                                                             <label for="usr">ชื่อโปรโมชั่น</label>
-                                                                            <input type="text" align="center" style="width: 50%;" class="form-control" name="Moviename" id="usr">
+                                                                            <input type="text" align="center" style="width: 50%;" class="form-control" name="promoname" id="usr">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -215,7 +210,7 @@ and open the template in the editor.
                                                                     <div class="col-sm-7">
                                                                         <div class="form-group ">
                                                                             <label for="usr">รายละเอียดโปรโมชั่น</label>
-                                                                            <input type="text" align="center" style="width: 50%;" class="form-control" name="Date_in" id="usr">
+                                                                            <input type="text" align="center" style="width: 50%;" class="form-control" name="prodetail" id="usr">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -224,7 +219,7 @@ and open the template in the editor.
                                                                     <div class="col-sm-7">
                                                                         <div class="form-group ">
                                                                             <label for="usr">ระยะเวลา</label>
-                                                                            <input type="text" align="center" style="width: 50%;" class="form-control" name="detail" id="usr">
+                                                                            <input type="text" align="center" style="width: 50%;" class="form-control" name="prodate" id="usr">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -233,7 +228,7 @@ and open the template in the editor.
                                                                     <div class="col-sm-7">
                                                                         <div class="form-group ">
                                                                             <label for="usr">เงื่อนไขการรับสิทธิ์</label>
-                                                                            <input type="text" align="center" style="width: 50%;" class="form-control" name="time_movie" id="usr">
+                                                                            <input type="text" align="center" style="width: 50%;" class="form-control" name="ccc" id="usr">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -242,7 +237,7 @@ and open the template in the editor.
                                                                     <div class="col-sm-7">
                                                                         <div class="form-group ">
                                                                             <label for="usr">สาขาที่เข้าร่วม</label>
-                                                                            <input type="text" align="center" style="width: 50%;" class="form-control" name="group_movie" id="usr">
+                                                                            <input type="text" align="center" style="width: 50%;" class="form-control" name="cc0" id="usr">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -260,7 +255,7 @@ and open the template in the editor.
                                                         </section>
                                                     </form>
 
-                                                    <form action='sentdeletemovice.php' method='POST'>
+                                                    <form action='deletepro.php' method='POST'>
                                                         <section class="page-section collapse" id="DeleteDatamovie">
                                                             <div align="center">
                                                                 <div class="card-body row no-gutters " style="width: 470px;">
