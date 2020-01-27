@@ -53,7 +53,7 @@
             //*** Reject user not online
             $intRejectTime = 20; // Minute
             $sql = "UPDATE member SET LoginStatus = '0', LastUpdate = '0000-00-00 00:00:00'  WHERE 1 AND DATE_ADD(LastUpdate, INTERVAL $intRejectTime MINUTE) <= NOW() ";
-            $query = mysqli_query($con, $sql);
+            $query = mysqli_query($conn, $sql);
             ?>
             <div class="limiter">
                 <div class="dorne-welcome-area bg-img bg-overlay" style="background-image: url(img/bg-img/hero1.png);">
