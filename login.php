@@ -34,7 +34,7 @@
         </script>
         <form action='sentlogin.php' method='POST' name="formjs">
             <?php
-            include './navigation/navbar.php';
+            include './navigation/navbar-login.php';
 
             ini_set('display_errors', 1);
             error_reporting(~0);
