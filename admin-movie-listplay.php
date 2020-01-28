@@ -76,8 +76,8 @@
                                                 </div>
                                                 </div>
                                                 </div>
-                                                
-                                                
+
+
                                                 <div class="container">
                                                     <div class="row">
                                                         <div class="col-12">
@@ -97,125 +97,125 @@
                                                     </div>
                                                 </div>
                                                 </section>
-        
-        <form action='sentaddmovice.php' method='POST' >
-            <section class="page-section collapse" id="addDatamovie">
-                <div class="container">
-                    <h2 class="text-center mt-0">เพิ่มข้อมูลหนัง</h2>
-                    <hr class="divider my-4">
-                    
-                    <div class="row">
-                        <div class="col-sm-4"></div>
-                        <div class="col-sm-7">
-                            <div class="form-group">
-                                <label>เพิ่มลิงค์รูปตัวอย่างหนัง</label>
-                                <input type="text" id="BSbtndanger" name="link">
-                                
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-sm-4"></div>
-                        <div class="col-sm-7">
-                            <div class="form-group ">
-                                <label for="usr">ชื่อหนัง</label>
-                                <input type="text" align="center" style="width: 50%;" class="form-control" name="Moviename" id="usr">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4"></div>
-                        <div class="col-sm-7">
-                            <div class="form-group ">
-                                <label for="usr">วันที่เข้าฉาย</label>
-                                <input type="text" align="center" style="width: 50%;" class="form-control" name="Date_in" id="usr">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4"></div>
-                        <div class="col-sm-7">
-                            <div class="form-group ">
-                                <label for="usr">ลายละเอียดหยัง</label>
-                                <input type="text" align="center" style="width: 50%;" class="form-control" name="detail" id="usr">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4"></div>
-                        <div class="col-sm-7">
-                            <div class="form-group ">
-                                <label for="usr">เวลาหนัง</label>
-                                <input type="text" align="center" style="width: 50%;" class="form-control" name="time_movie" id="usr">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4"></div>
-                        <div class="col-sm-7">
-                            <div class="form-group ">
-                                <label for="usr">หมวดหมู่</label>
-                                <input type="text" align="center" style="width: 50%;" class="form-control" name="group_movie" id="usr">
-                            </div>
-                        </div>
-                    </div>
+                                                <form action='sentaddmovice.php' method='POST' >
+                                                    <section class="page-section collapse" id="addDatamovie">
+                                                        <div class="container">
+                                                            <h2 class="text-center mt-0">เพิ่มข้อมูลหนัง</h2>
+                                                            <hr class="divider my-4">
 
-                    <div class="row">
-                        <div class="col-sm-5"></div>
-                        <div class="col-sm-7">
-                            <div class="form-group ">
-                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="Send">
-                            </div>
-                        </div>
-                    </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-4"></div>
+                                                                <div class="col-sm-7">
+                                                                    <div class="form-group">
+                                                                        <label>เพิ่มลิงค์รูปตัวอย่างหนัง</label>
+                                                                        <input type="text" id="BSbtndanger" name="link">
 
-                </div>
-            </section>
-        </form>
-                                                
-        <form action='sentdeletemovice.php' method='POST'>
-            <section class="page-section collapse" id="DeleteDatamovie">
-                <div align="center">
-                    <div class="card-body row no-gutters " style="width: 470px;">
-                        <!--end of col-->
-                        <div class="col">
-<!--                            <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Enter Movicename for Delete" name="delet">-->
-                            <input type="text" align="center" style="width: 80%;" class="form-control" placeholder="Enter Movicename for Delete" name="delete" id="usr">
-                        </div>
-                        <!--end of col-->
-                        <div class="col-auto">
-                            <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="Delete">
-                        </div>
-                        <!--end of col-->
-                    </div>
-                </div>
-            </section>
-        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
 
-        
-        
-        
-        <form action='chedit.php' method='POST'>
-            <section class="page-section collapse" id="EditDatamovie">
-                <div align="center">
-                    <div class="card-body row no-gutters align-items-center"style="width: 400px;" >
-                        <!--end of col-->
-                        <div class="col">
-<!--                            <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search topics or keywords">-->
-                            <input type="text" align="center" style="width: 100%;" class="form-control" placeholder="Enter Movicename for Edit" name="traget" id="usr">
-                        </div>
-                        <!--end of col-->
-                        <div class="col-auto">
-                            <button class="btn btn-lg btn-success" type="submit">Search</button>
-                        </div>
-                        <!--end of col-->
-                    </div>
-                </div>
-            </section>
-        </form>
-                                                
-        
+                                                            <div class="row">
+                                                                <div class="col-sm-4"></div>
+                                                                <div class="col-sm-7">
+                                                                    <div class="form-group ">
+                                                                        <label for="usr">ชื่อหนัง</label>
+                                                                        <input type="text" align="center" style="width: 50%;" class="form-control" name="Moviename" id="usr">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-4"></div>
+                                                                <div class="col-sm-7">
+                                                                    <div class="form-group ">
+                                                                        <label for="usr">วันที่เข้าฉาย</label>
+                                                                        <input type="text" align="center" style="width: 50%;" class="form-control" name="Date_in" id="usr">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-4"></div>
+                                                                <div class="col-sm-7">
+                                                                    <div class="form-group ">
+                                                                        <label for="usr">ลายละเอียดหยัง</label>
+                                                                        <input type="text" align="center" style="width: 50%;" class="form-control" name="detail" id="usr">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-4"></div>
+                                                                <div class="col-sm-7">
+                                                                    <div class="form-group ">
+                                                                        <label for="usr">เวลาหนัง</label>
+                                                                        <input type="text" align="center" style="width: 50%;" class="form-control" name="time_movie" id="usr">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-4"></div>
+                                                                <div class="col-sm-7">
+                                                                    <div class="form-group ">
+                                                                        <label for="usr">หมวดหมู่</label>
+                                                                        <input type="text" align="center" style="width: 50%;" class="form-control" name="group_movie" id="usr">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="col-sm-5"></div>
+                                                                <div class="col-sm-7">
+                                                                    <div class="form-group ">
+                                                                        <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="Send">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </section>
+                                                </form>
+
+                                                <form action='sentdeletemovice.php' method='POST'>
+                                                    <section class="page-section collapse" id="DeleteDatamovie">
+                                                        <div align="center">
+                                                            <div class="card-body row no-gutters " style="width: 470px;">
+                                                                <!--end of col-->
+                                                                <div class="col">
+                                        <!--                            <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Enter Movicename for Delete" name="delet">-->
+                                                                    <input type="text" align="center" style="width: 80%;" class="form-control" placeholder="Enter Movicename for Delete" name="delete" id="usr">
+                                                                </div>
+                                                                <!--end of col-->
+                                                                <div class="col-auto">
+                                                                    <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="Delete">
+                                                                </div>
+                                                                <!--end of col-->
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                </form>
+
+
+
+
+                                                <form action='admin-Edit-Movie-page.php' method='POST'>
+                                                    <section class="page-section collapse" id="EditDatamovie">
+                                                        <div align="center">
+                                                            <div class="card-body row no-gutters align-items-center"style="width: 400px;" >
+                                                                <!--end of col-->
+                                                                <div class="col">
+                                        <!--                            <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search topics or keywords">-->
+                                                                    <input type="text" align="center" style="width: 100%;" class="form-control" placeholder="Enter Movicename for Edit" name="traget" id="usr">
+                                                                </div>
+                                                                <!--end of col-->
+                                                                <div class="col-auto">
+                                                                    <button class="btn btn-lg btn-success" type="submit">Search</button>
+                                                                </div>
+                                                                <!--end of col-->
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                </form>
+
+
                                                 <div class="dorne-clients-area section-padding-100">
                                                     <div class="container-fluid">
                                                         <div class="row">
