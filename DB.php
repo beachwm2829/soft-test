@@ -17,6 +17,7 @@ class connectdb {
         $sql = "SELECT * FROM `member` WHERE mUser='" . $user . "' AND mPass='" . $pass . "'";
         $result = mysqli_query($this->connichdb(), $sql);
         if (mysqli_num_rows($result) == 1) {
+            
             echo 'Login OK!!!';
             $row = mysqli_fetch_array($result);
             //session_start();
@@ -26,7 +27,7 @@ class connectdb {
             //session_start();
             //$_SESSION['mUser']=$row['mName'];
             if ($p == 'Member') {
-                header("location:chair.php");
+                header("location:index.php");
             } else {
                 header("location:admin-movie-listplay.php");
             }
@@ -173,13 +174,10 @@ class connectdb {
     }
      public function addticket($mname,$mdate,$mtime,$cname,$price,$s)
     {
-        $sql = "INSERT INTO `ticket`(`tid`, `movie`, `date`, `timeshow`, `cinema`, `seat`, `price`) "
-                . "VALUES ('".$mname."','".$mdate."','".$mtime."','".$cname."','".$price."','".$s."')";
+        $sql = "INSERT INTO `ticket`(`movie`, `date`, `timeshow`, `cinema`, `seat`, `price`) "
+                . "VALUES ('".$mname."','".$mdate."','".$mtime."','".$cname."','".$s."','".$price."')";
         $result = mysqli_query($this->connichdb(), $sql);
-        if (mysqli_num_rows($result) == 1) {
-            echo 'success';
-        }
-
+        header("location:payment-ticket.php");
     }
     
     public function addshowtime($mid,$cid,$time)

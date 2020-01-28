@@ -93,13 +93,13 @@
                                         while($row = mysqli_fetch_array($objquery)){
                                             //echo '<form action="chair.php" method="post" align="left">';
                                             if($row["mmid"] == $m){ 
-                                                echo '<p style="color: black" name="mname">'.$row["name"].'</p>';
-                                                echo '<br>'; 
+                                                echo '<p style="color: black" align="left">'.$row["name"].'</p>';
+                                                echo '<br><div align="left">'; 
                                                 echo '<a href="chair.php?cid='.$row['cid'].'&tid='.$row["tid"].'&mid='.$row["mmid"].'" class="btn btn-primary btn-lg">'.$row["timeshow"].'</a>';
-                                                echo '<br>'; 
+                                                echo '</div><br>'; 
                                             }
                                         }
-                                        echo '</form>';
+//                                        echo '</form>';
                                     }
                             ?>
                 
