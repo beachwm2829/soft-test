@@ -110,81 +110,81 @@ and open the template in the editor.
                                                     </div>
 
                                                     </section>
-                                                    <form  method='POST' >
-                                                        <section>
-                                                            <div class="container">
-                                                                <h2 class="text-center mt-0">แก้ไขข้อมูลโปรโมชั่น</h2>
-                                                                <hr class="divider my-4">
+        <form action="senteditprosql.php"  method='POST' >
+            <section>
+                <div class="container">
+                    <h2 class="text-center mt-0">แก้ไขข้อมูลโปรโมชั่น</h2>
+                    <hr class="divider my-4">
 
-                                                                <div class="row">
-                                                                    <div class="col-sm-4"></div>
-                                                                    <div class="col-sm-7">
-                                                                        <div class="form-group">
-                                                                            <label>เพิ่มลิงค์รูปตัวอย่างโปรโมชั่น</label>
-                                                                            <input type="text" id="BSbtndanger" name="link">
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group">
+                                <label>เพิ่มลิงค์รูปตัวอย่างโปรโมชั่น</label>
+                                <input type="file" name="fileToUpload" id="fileToUpload">
 
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                                                                <div class="row">
-                                                                    <div class="col-sm-4"></div>
-                                                                    <div class="col-sm-7">
-                                                                        <div class="form-group ">
-                                                                            <label for="usr">ชื่อโปรโมชั่น</label>
-                                                                            <input type="text" align="center" style="width: 50%;" class="form-control" name="promoname" id="usr">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-sm-4"></div>
-                                                                    <div class="col-sm-7">
-                                                                        <div class="form-group ">
-                                                                            <label for="usr">รายละเอียดโปรโมชั่น</label>
-                                                                            <input type="text" align="center" style="width: 50%;" class="form-control" name="prodetail" id="usr">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-sm-4"></div>
-                                                                    <div class="col-sm-7">
-                                                                        <div class="form-group ">
-                                                                            <label for="usr">ระยะเวลา</label>
-                                                                            <input type="text" align="center" style="width: 50%;" class="form-control" name="prodate" id="usr">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-sm-4"></div>
-                                                                    <div class="col-sm-7">
-                                                                        <div class="form-group ">
-                                                                            <label for="usr">เงื่อนไขการรับสิทธิ์</label>
-                                                                            <input type="text" align="center" style="width: 50%;" class="form-control" name="ccc" id="usr">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-sm-4"></div>
-                                                                    <div class="col-sm-7">
-                                                                        <div class="form-group ">
-                                                                            <label for="usr">สาขาที่เข้าร่วม</label>
-                                                                            <input type="text" align="center" style="width: 50%;" class="form-control" name="cc0" id="usr">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <label for="usr">ชื่อโปรโมชั่น</label>
+                                <input type="text" align="center" style="width: 50%;" class="form-control" name="promoname" id="usr">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <label for="usr">รายละเอียดโปรโมชั่น</label>
+                                <input type="text" align="center" style="width: 50%;" class="form-control" name="prodetail" id="usr">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <label for="usr">ระยะเวลา</label>
+                                <input type="text" align="center" style="width: 50%;" class="form-control" name="prodate" id="usr">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <label for="usr">เงื่อนไขการรับสิทธิ์</label>
+                                <input type="text" align="center" style="width: 50%;" class="form-control" name="ccc" id="usr">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <label for="usr">สาขาที่เข้าร่วม</label>
+                                <input type="text" align="center" style="width: 50%;" class="form-control" name="cc0" id="usr">
+                            </div>
+                        </div>
+                    </div>
 
-                                                                <div class="row">
-                                                                    <div class="col-sm-5"></div>
-                                                                    <div class="col-sm-7">
-                                                                        <div class="form-group ">
-                                                                            <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="Send">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                    <div class="row">
+                        <div class="col-sm-5"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="Send">
+                            </div>
+                        </div>
+                    </div>
 
-                                                            </div>
-                                                        </section>
-                                                    </form>
+                </div>
+            </section>
+        </form>
                                                     <div class="dorne-clients-area section-padding-100">
                                                         <div class="container-fluid">
                                                             <div class="row">

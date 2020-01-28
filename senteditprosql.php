@@ -2,11 +2,11 @@
 session_start();
 require_once './DB.php';
 
-$B=$_POST['promoname'];
-$C=$_POST['prodetail'];
-$D=$_POST['prodate'];
-$E=$_POST['ccc'];
-$F=$_POST['cc0'];
+$pname=$_POST['promoname'];
+$pdetail=$_POST['prodetail'];
+$pdate=$_POST['prodate'];
+$A=$_POST['ccc'];
+$B=$_POST['cc0'];
 //$lk=$_POST['link'];
 $file=$_FILES['fileToUpload'];
 
@@ -25,5 +25,5 @@ $ext = pathinfo(basename($_FILES['fileToUpload']['name']),PATHINFO_EXTENSION);
 
 $con=new connectdb();
 $con->connichdb();
-$con->addpro($lk, $B, $C, $D, $E, $F);
+$con->editpromo($pname,$pdetail,$pdate,$A,$B,$lk);
 ?>

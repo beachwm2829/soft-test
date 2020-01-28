@@ -146,4 +146,29 @@ class connectdb {
         echo $sql;
         header("location:admin-movie-listplay.php");
     }
+    
+    public function checeditpro($tg)
+    {
+        $sql = "SELECT * FROM `promo` WHERE pName='" . $tg . "'";
+        $result = mysqli_query($this->connichdb(), $sql);
+        if (mysqli_num_rows($result) == 1) {
+            $row = mysqli_fetch_array($result);
+            session_start();
+            
+            $_SESSION['pn'] = $row['pName'];
+            
+            header("location:admin-Edit-promotion-page.php");
+            
+        } else {
+            echo $sql;
+        }
+    }
+    public function editpromo($pname,$pdetail,$pdate,$A,$B,$lk)
+    {
+        session_start();
+        $sql = "UPDATE `promo` SET `pName`='" . $pname . "',`pDetail`='" . $pdetail . "',`pDate`='" . $pdate . "',`pCondition`='" . @A . "',`pCounty`='" . $B . "',`pLink`='" . $lk . "' WHERE pName = '".$_SESSION['pn']."'";
+        $result = mysqli_query($this->connichdb(), $sql);
+        echo $sql;
+        header("location:admin-promosion.php");
+    }
 }

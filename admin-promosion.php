@@ -189,8 +189,8 @@
                                                                     <div class="col-sm-4"></div>
                                                                     <div class="col-sm-7">
                                                                         <div class="form-group">
-                                                                            <label>เพิ่มลิงค์รูปตัวอย่างโปรโมชั่น</label>
-                                                                            <input type="text" id="BSbtndanger" name="link">
+                                                                            <label>เพิ่มรูปตัวอย่างโปรโมชั่น</label>
+                                                                            <input type="file" name="fileToUpload" id="fileToUpload">
 
                                                                         </div>
                                                                     </div>
@@ -277,7 +277,7 @@
 
 
 
-                                                    <form action='admin-Edit-promotion-page.php' method='POST'>
+                                                    <form action='senteditpro.php' method='POST'>
                                                         <section class="page-section collapse" id="EditDatamovie">
                                                             <div align="center">
                                                                 <div class="card-body row no-gutters align-items-center"style="width: 400px;" >
