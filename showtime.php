@@ -65,8 +65,11 @@
                                             <br><br><br><br><br>
                                             <h3 style="color: black"><?php echo $row["mvName"]; ?></h3>
                                             <!--ชิ่อหนัง -->
-                                            <h6 style="color: blue"><?php echo $row["mvDate"]; ?></h6>
-                                            <!--วัน - เวลา -->               
+                                            <h6 style="color: blue"><?php echo $row["mvDate"]; ?> | <?php echo $row["mvTime"]; ?> นาที</h6>
+                                            <!--วัน - เวลา -->           
+                                            <h5 style="color: black">รายละเอียดหนัง</h5>
+                                            <h6 style="color: blue"><span class="glyphicon glyphicon-map-marker"><?php echo $row["mvDetail"]; ?></span></h6>
+                                            
                                             
                                         </div>
                                     </div>
@@ -81,22 +84,22 @@
                                 $m = $_REQUEST["m"];
                                 $con = new connectdb();
                                     if($con ->connichdb()){
-                                        $sql_user = "SELECT cinema.cid, cinema.name, movice.mmid, movice.mvName, timeshow.timeshow "
+                                        $sql_user = "SELECT cinema.cid, cinema.name, movice.mmid, movice.mvName, timeshow.timeshow, timeshow.tid "
                                                 . "FROM timeshow "
                                                 . "INNER JOIN cinema ON cinema.cid = timeshow.cid "
                                                 . "JOIN movice ON movice.mmid = timeshow.mid";
                                         $objquery = mysqli_query($con->connichdb(), $sql_user);
                                         $i = 1;
                                         while($row = mysqli_fetch_array($objquery)){
-           
-                                            if($row["mmid"] == $m){
-                                                echo $row["name"];
+                                            //echo '<form action="chair.php" method="post" align="left">';
+                                            if($row["mmid"] == $m){ 
+                                                echo '<p style="color: black" name="mname">'.$row["name"].'</p>';
                                                 echo '<br>'; 
-                                                echo $row["timeshow"];
+                                                echo '<a href="chair.php?cid='.$row['cid'].'&tid='.$row["tid"].'&mid='.$row["mmid"].'" class="btn btn-primary btn-lg">'.$row["timeshow"].'</a>';
                                                 echo '<br>'; 
                                             }
-                                            
                                         }
+                                        echo '</form>';
                                     }
                             ?>
                 

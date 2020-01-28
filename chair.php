@@ -11,11 +11,24 @@ and open the template in the editor.
         session_start();
         error_reporting(E_ALL^E_NOTICE);
         require_once './DB.php';
+        $cid = $_REQUEST["cid"];
+        $tid = $_REQUEST["tid"];
+        $mid = $_REQUEST["mid"];
+        $_SESSION['cid'] = $cid;
+        $_SESSION['tid'] = $tid;
+        $_SESSION['mid'] = $mid;
+       
         $con = new connectdb();
             if($con ->connichdb()){
-                $sql_user = "SELECT * FROM `ticket`";
+                $sql_user = "SELECT * FROM timeshow INNER JOIN cinema "
+                        . "ON cinema.cid = timeshow.cid JOIN movice "
+                        . "ON movice.mmid = timeshow.mid "
+                        . "WHERE timeshow.tid='".$tid."'  "
+                        . "AND cinema.cid='".$cid."' "
+                        . "AND movice.mmid='".$mid."'";
                 $objquery = mysqli_query($con->connichdb(), $sql_user);
             }
+
     ?>
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -79,41 +92,60 @@ and open the template in the editor.
             <div class="row">
                 <div class="col-12">
                     <br>
+                    <?php
+                        $row = mysqli_fetch_array($objquery);
+                    ?>
                     <div class="about-content text-center">
                         <div class="container">
-                            <h2>เลือกที่นั่ง</h2>
-                            <br>
                             <div class="card" style="width:1080px;">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-sm" align="rigth">
-                                            <img src="https://lh3.googleusercontent.com/AWae8iwbYz1O9K6pUBQFJ2gAIrAY8ypeVY8cD1L_hN1ZM3-76efm6Z8Pdpp2n4zDtj8qXQWZNRLCe8AHu_9w=w260" class="rounded" alt="Cinque Terre">
+                                            <img src="<?php echo $row["mvImage"]; ?>" class="rounded" alt="Cinque Terre">
                                         </div>
                                         <div class="col-sm" align="left">
                                             <br><br><br><br><br>
-                                            <h3 style="color: black">แวนการ์ด หน่วยพิทักษ์ฟัดข้ามโลก</h3>
+                                            <h3 style="color: black"><?php echo $row["mvName"]; ?></h3>
                                             <!--ชิ่อหนัง -->
-                                            <h6 style="color: blue">25 มกราคม 2020 | 16 : 20</h6>
+                                            <h6 style="color: blue"><?php echo $row["mvDate"]; ?> | <?php echo $row["timeshow"]; ?></h6>
                                             <!--วัน - เวลา -->
-                                            <h6 style="color: blue"><span class="glyphicon glyphicon-map-marker"></span> เอส เอฟ เวิลด์ ซีเนม่า เซ็นทรัลเวิลด์</h6>
                                             <h4 style="color: black">โรงภาพยนต์</h4>
+                                            <h6 style="color: blue"><span class="glyphicon glyphicon-map-marker"><?php echo $row["name"]; ?></span></h6>
+                                            
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <br><br>
-                            <hr>
                             
+                            <h2>เลือกที่นั่ง</h2>
+                           
                             <div class="card" style="width:1080px">
-                                <?php 
+                                <?php
+                                if($con ->connichdb()){
+                                    $sql_user = "SELECT * FROM `ticket` "
+                                            . "WHERE movie='".$row["mvName"]."' "
+                                            . "AND timeshow='".$row["timeshow"]."' "
+                                            . "AND cinema='".$row["name"]."'";
+                                    $objquery = mysqli_query($con->connichdb(), $sql_user);
+                                }
                                 while($row = mysqli_fetch_array($objquery)){
                                     $str = explode(",", $row["seat"]);
 //                                    echo $str;
-//                                    for($i=0;$i<count($str);$i++){
-////                                        echo $str[$i];
-//                                    }
                                 }
-                                
+//                                if(mysqli_num_rows($row)!=0){
+//                                    echo 'if';
+//                                   while($row = mysqli_fetch_array($objquery)){
+//                                        $str = explode(",", $row["seat"]);
+//                                   echo $str;
+//                                   for($i=0;$i<count($str);$i++){
+//                                        echo $str[$i];
+//                                  }
+//                                    }
+//                                }else{
+//                                    echo 'else';
+//                                }
+ 
                                 //$str = explode(",", $row["seat"]);
 //                                echo count($row["seat"]);
 //                                echo $str[0];
@@ -121,7 +153,7 @@ and open the template in the editor.
                                 
                                 ?>
                                 <div class="card-body">
-                                    <h4 class="card-title">ที่นั่ง</h4>
+                                    <h4 class="card-title">___________หน้าจอ___________</h4>
                                     <form action="checkseat.php" method="post">
                                         <center><table>
                                         <tbody>
@@ -130,9 +162,10 @@ and open the template in the editor.
                                                     <label class="container1">
                                                         <?php 
                                                         for($i=0;$i<=count($str);$i++){
-                                                        if($str[$i] == "A1"){
+                                                        if($str[$i] == "A1"){                         
                                                             echo '<input type="checkbox" name="checkbox[]" value="A1" checked="checked" disabled>';
                                                             echo '<span class="checkmark2"></span>';
+                                                            break;
                                                         }else{
                                                             echo '<input type="checkbox" name="checkbox[]" value="A1">';
                                                             echo '<span class="checkmark1"></span>';
