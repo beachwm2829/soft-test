@@ -19,6 +19,10 @@
                 <a class="nav-link " href="addpoint.php">จัดการPoint </a>
 
               </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link " href="admin-cinema_county.php">จัดการโรงหนัง </a>
+
+              </li>
               <li class="nav-item">
                 <a class="nav-link" href="admin-promosion.php">จัดการโปรโมชั่น</a>
               </li>
