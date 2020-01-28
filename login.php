@@ -6,7 +6,7 @@
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Dorne- Directory &amp; Listing Template</title>
+        <title>เข้าสู่ระบบ | Garle Cinema</title>
         <link rel="icon" href="img/core-img/favicon.ico">
         <link href="style.css" rel="stylesheet">
         <link href="css/responsive/responsive.css" rel="stylesheet">

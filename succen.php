@@ -27,7 +27,6 @@ and open the template in the editor.
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Dorne- Directory &amp; Listing Template</title>
     <link rel="icon" href="img/core-img/favicon.ico">
     <link href="style.css" rel="stylesheet">
     <link href="css/responsive/responsive.css" rel="stylesheet">
@@ -37,7 +36,7 @@ and open the template in the editor.
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/minty/bootstrap.min.css" rel="stylesheet" integrity="sha384-9NlqO4dP5KfioUGS568UFwM3lbWf3Uj3Qb7FBHuIuhLoDp3ZgAqPE1/MYLEBPZYM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>หน้าแรก | KAREE Cinema</title>
+    <title>เลือกที่นั่ง | Garle Cinema</title>
     <style>
         .mySlides {
             display: none;
@@ -91,7 +90,7 @@ and open the template in the editor.
                                             <img src="<?php echo $row["mvImage"] ?>" class="rounded" alt="Cinque Terre">
                                         </div>
                                         <div class="col-sm" align="left">
-                                        <form action="checksuccen.php" method="post"><div class="col-sm" align="left">
+                                            <form action="checksuccen.php" method="post"><div class="col-sm" align="left">
                                             <br><br><br><br><br>
                                             <h3 style="color: black"><?php echo $row["mvName"] ?></h3>
                                             <!--ชิ่อหนัง -->

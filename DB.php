@@ -1,7 +1,7 @@
 <?php
-
+if (!session_id()) session_start();
 class connectdb {
-
+    
     public function connichdb() {
         $dbhost = "localhost";
         $dbuser = "root";
@@ -14,11 +14,15 @@ class connectdb {
     }
 
     public function checkdb($user, $pass) {
+        
         $sql = "SELECT * FROM `member` WHERE mUser='" . $user . "' AND mPass='" . $pass . "'";
         $result = mysqli_query($this->connichdb(), $sql);
         if (mysqli_num_rows($result) == 1) {
-            
-            echo 'Login OK!!!';
+            $row = mysqli_fetch_array($result);
+            $_SESSION["id"] = $user;
+            $_SESSION["pass"] = $pass;
+            echo $row["mid"];
+            //echo 'Login OK!!!';
             $row = mysqli_fetch_array($result);
             //session_start();
             $p = $row['mPosition'];
@@ -27,9 +31,9 @@ class connectdb {
             //session_start();
             //$_SESSION['mUser']=$row['mName'];
             if ($p == 'Member') {
-                header("location:index.php");
+                //header("location:index.php");
             } else {
-                header("location:admin-movie-listplay.php");
+                //header("location:admin-movie-listplay.php");
             }
         } else {
 //             echo"Login Eror<br>";
@@ -109,7 +113,6 @@ class connectdb {
         $result = mysqli_query($this->connichdb(), $sql);
         if (mysqli_num_rows($result) == 1) {
             $row = mysqli_fetch_array($result);
-            session_start();
             
             $_SESSION['mvn'] = $row['mvName'];
 //            $_SESSION['mvda'] = $row['mvDate'];
@@ -141,7 +144,6 @@ class connectdb {
     
     public function editmovice($mvn,$di,$dt,$tm,$gm,$lk)
     {
-        session_start();
         $sql = "UPDATE `movice` SET `mvName`='" . $mvn . "',`mvDate`='" . $di . "',`mvDetail`='" . $dt . "',`mvTime`='" . $tm . "',`mvg`='" . $gm . "',`mvImage`='" . $lk . "' WHERE mvName = '".$_SESSION['mvn']."'";
         $result = mysqli_query($this->connichdb(), $sql);
         echo $sql;
@@ -166,16 +168,16 @@ class connectdb {
     }
     public function editpromo($pname,$pdetail,$pdate,$A,$B,$lk)
     {
-        session_start();
         $sql = "UPDATE `promo` SET `pName`='" . $pname . "',`pDetail`='" . $pdetail . "',`pDate`='" . $pdate . "',`pCondition`='" . @A . "',`pCounty`='" . $B . "',`pLink`='" . $lk . "' WHERE pName = '".$_SESSION['pn']."'";
         $result = mysqli_query($this->connichdb(), $sql);
         echo $sql;
         header("location:admin-promosion.php");
     }
-     public function addticket($mname,$mdate,$mtime,$cname,$price,$s)
+    public function addticket($mname,$mid,$mdate,$mtime,$cname,$price,$s)
     {
-        $sql = "INSERT INTO `ticket`(`movie`, `date`, `timeshow`, `cinema`, `seat`, `price`) "
-                . "VALUES ('".$mname."','".$mdate."','".$mtime."','".$cname."','".$s."','".$price."')";
+//        echo $mid;
+        $sql = "INSERT INTO `ticket`(`movie`, `memid`, `date`, `timeshow`, `cinema`, `seat`, `price`) "
+                . "VALUES ('".$mname."','".$mid."','".$mdate."','".$mtime."','".$cname."','".$s."','".$price."')";
         $result = mysqli_query($this->connichdb(), $sql);
         header("location:payment-ticket.php");
     }
@@ -200,7 +202,6 @@ class connectdb {
         $result = mysqli_query($this->connichdb(), $sql);
         if (mysqli_num_rows($result) == 1) {
             $row = mysqli_fetch_array($result);
-            session_start();
             
             $_SESSION['tid'] = $row['tid'];
             

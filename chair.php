@@ -45,7 +45,7 @@ and open the template in the editor.
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
    
-    <title>เลือกที่นั่ง | KAREE Cinema</title>
+    <title>เลือกรอบหนัง | Garle Cinema</title>
     <style>
         .mySlides {
             display: none;
