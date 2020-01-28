@@ -21,19 +21,20 @@ class connectdb {
             $row = mysqli_fetch_array($result);
             $_SESSION["id"] = $user;
             $_SESSION["pass"] = $pass;
-            echo $row["mid"];
+            $_SESSION["mid"] = $row["mid"];
             //echo 'Login OK!!!';
-            $row = mysqli_fetch_array($result);
+            //$row = mysqli_fetch_array($result);
             //session_start();
             $p = $row['mPosition'];
-            //echo $p;
+//            echo $row['mPosition'];
+//            echo $row['mUser'];
             //$row= mysqli_fetch_array($result);
             //session_start();
             //$_SESSION['mUser']=$row['mName'];
             if ($p == 'Member') {
-                //header("location:index.php");
+                header("location:index.php");
             } else {
-                //header("location:admin-movie-listplay.php");
+                header("location:admin-movie-listplay.php");
             }
         } else {
 //             echo"Login Eror<br>";
