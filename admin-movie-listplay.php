@@ -98,7 +98,7 @@
                                                 </div>
                                                 </section>
 
-                                                <form action='sentaddmovice.php' method='POST' >
+                                                <form action='sentaddmovice.php' method='POST' enctype="multipart/form-data" >
                                                     <section class="page-section collapse" id="addDatamovie">
                                                         <div class="container">
                                                             <h2 class="text-center mt-0">เพิ่มข้อมูลหนัง</h2>
@@ -109,7 +109,7 @@
                                                                 <div class="col-sm-7">
                                                                     <div class="form-group">
                                                                         <label>เพิ่มลิงค์รูปตัวอย่างหนัง</label>
-                                                                        <input type="text" id="BSbtndanger" name="link">
+                                                                        <input type="file" name="fileToUpload" id="fileToUpload">
 
                                                                     </div>
                                                                 </div>
