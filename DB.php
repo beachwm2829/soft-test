@@ -111,16 +111,17 @@ class connectdb {
             session_start();
             
             $_SESSION['mvn'] = $row['mvName'];
-            $_SESSION['mvda'] = $row['mvDate'];
-            $_SESSION['mvde'] = $row['mvDetail'];
-            $_SESSION['mvt'] = $row['mvTime'];
-            $_SESSION['mvg'] = $row['mvg'];
-            $_SESSION['mvi'] = $row['mvImage'];
+//            $_SESSION['mvda'] = $row['mvDate'];
+//            $_SESSION['mvde'] = $row['mvDetail'];
+//            $_SESSION['mvt'] = $row['mvTime'];
+//            $_SESSION['mvg'] = $row['mvg'];
+//            $_SESSION['mvi'] = $row['mvImage'];
             
             header("location:admin-Edit-Movie-page.php");
             
         } else {
-            header("location:admin-movie-listplay.php");
+            //header("location:admin-movie-listplay.php");
+            echo $sql;
         }
     }
 
@@ -139,8 +140,10 @@ class connectdb {
     
     public function editmovice($mvn,$di,$dt,$tm,$gm,$lk)
     {
-        $sql = "UPDATE INTO `movice`(`mvName`, `mvDate`, `mvDetail`, `mvTime`, `mvg`,mvImage) VALUES ('" . $mvn . "','" . $di . "','" . $dt . "','" . $tm . "','" . $gm . "','" . $lk . "')";
+        session_start();
+        $sql = "UPDATE `movice` SET `mvName`='" . $mvn . "',`mvDate`='" . $di . "',`mvDetail`='" . $dt . "',`mvTime`='" . $tm . "',`mvg`='" . $gm . "',`mvImage`='" . $lk . "' WHERE mvName = '".$_SESSION['mvn']."'";
         $result = mysqli_query($this->connichdb(), $sql);
+        echo $sql;
         header("location:admin-movie-listplay.php");
     }
 }

@@ -88,7 +88,7 @@
                                                                 <div class="col-sm-7">
                                                                     <div class="form-group">
                                                                         <label>เพิ่มลิงค์รูปตัวอย่างหนัง</label>
-                                                                        <input type="text" id="BSbtndanger" name="link">
+                                                                       <input type="file" name="fileToUpload" id="fileToUpload">
 
                                                                     </div>
                                                                 </div>
