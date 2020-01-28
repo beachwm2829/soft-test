@@ -109,8 +109,6 @@ class connectdb {
         if (mysqli_num_rows($result) == 1) {
             $row = mysqli_fetch_array($result);
             session_start();
-            //session_register('name');
-            //$HTTP_SESSION_VARS['name'] = $row['mvName'];
             
             $_SESSION['mvn'] = $row['mvName'];
             $_SESSION['mvda'] = $row['mvDate'];
@@ -119,19 +117,7 @@ class connectdb {
             $_SESSION['mvg'] = $row['mvg'];
             $_SESSION['mvi'] = $row['mvImage'];
             
-            header("location:editmovicepage.php");
-
-//            echo $_SESSION['mvn'];
-//            echo '<br>';
-//            echo $_SESSION['mvda'];
-//            echo '<br>';
-//            echo $_SESSION['mvde'];
-//            echo '<br>';
-//            echo $_SESSION['mvt'];
-//            echo '<br>';
-//            echo $_SESSION['mvg'];
-//            echo '<br>';
-//            echo $_SESSION['mvi'];
+            header("location:admin-Edit-Movie-page.php");
             
         } else {
             header("location:admin-movie-listplay.php");
@@ -149,5 +135,12 @@ class connectdb {
         $sql = "DELETE FROM `promo` WHERE `pName` = '".$delpro."'";
         $result = mysqli_query($this->connichdb(), $sql);
         header("location:admin-promosion.php");
+    }
+    
+    public function editmovice($mvn,$di,$dt,$tm,$gm,$lk)
+    {
+        $sql = "UPDATE INTO `movice`(`mvName`, `mvDate`, `mvDetail`, `mvTime`, `mvg`,mvImage) VALUES ('" . $mvn . "','" . $di . "','" . $dt . "','" . $tm . "','" . $gm . "','" . $lk . "')";
+        $result = mysqli_query($this->connichdb(), $sql);
+        header("location:admin-movie-listplay.php");
     }
 }

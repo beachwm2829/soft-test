@@ -75,9 +75,9 @@
                                                 </div>
                                                 </div>
                                                 </div>
-                                                </div>
+            
                                                 <br>
-                                                <form action='sentaddmovice.php' method='POST' >
+                                                <form action='senteditmov.php' method='POST' >
                                                     <section >
                                                         <div class="container">
                                                             <h2 class="text-center mt-0">แก้ไขข้อมูลหนัง</h2>
