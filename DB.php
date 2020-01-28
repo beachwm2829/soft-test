@@ -171,4 +171,13 @@ class connectdb {
         echo $sql;
         header("location:admin-promosion.php");
     }
+     public function addticket($mname,$mdate,$mtime,$cname,$price,$s)
+    {
+        $sql = "INSERT INTO `ticket`(`tid`, `movie`, `date`, `timeshow`, `cinema`, `seat`, `price`) "
+                . "VALUES ('".$mname."','".$mdate."','".$mtime."','".$cname."','".$price."','".$s."')";
+        $result = mysqli_query($this->connichdb(), $sql);
+//        echo $sql;
+        header("location:pa.php");
+
+    }
 }
