@@ -22,6 +22,7 @@ class connectdb {
             $_SESSION["id"] = $user;
             $_SESSION["pass"] = $pass;
             $_SESSION["mid"] = $row["mid"];
+            $_SESSION["point"] = $row["mPoint"];
             //echo 'Login OK!!!';
             //$row = mysqli_fetch_array($result);
             //session_start();
@@ -177,10 +178,22 @@ class connectdb {
     public function addticket($mname,$mid,$mdate,$mtime,$cname,$price,$s)
     {
 //        echo $mid;
-        $sql = "INSERT INTO `ticket`(`movie`, `memid`, `date`, `timeshow`, `cinema`, `seat`, `price`) "
-                . "VALUES ('".$mname."','".$mid."','".$mdate."','".$mtime."','".$cname."','".$s."','".$price."')";
-        $result = mysqli_query($this->connichdb(), $sql);
-        header("location:payment-ticket.php");
+        if($price <= $_SESSION["point"])
+        {
+            $sum = $_SESSION["point"] - $price;
+            $sss = "UPDATE `member` SET `mPoint`=".$sum." WHERE mid = ".$mid;
+            $result = mysqli_query($this->connichdb(), $sss);
+            $sql = "INSERT INTO `ticket`(`movie`, `memid`, `date`, `timeshow`, `cinema`, `seat`, `price`) "
+                    . "VALUES ('" . $mname . "','" . $mid . "','" . $mdate . "','" . $mtime . "','" . $cname . "','" . $s . "','" . $price . "')";
+            $result = mysqli_query($this->connichdb(), $sql);
+            header("location:payment-ticket.php");
+        }
+        else
+        {
+            //echo 'No point';
+            header("location:index.php");
+        }
+        
     }
     
     public function addshowtime($mid,$cid,$time)
