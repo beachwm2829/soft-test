@@ -236,7 +236,7 @@ and open the template in the editor.
                                                             </section>
                                                         </form>
 
-                                                        <form action='senteditpoint.php' method='POST'>
+                                                        <form action='admin-Edit-Cinema-page.php' method='POST'>
                                                             <section class="page-section collapse" id="EditDatamovie">
                                                                 <div class="container">
                                                                     <h2 class="text-center mt-0">แก้ไขโรงหนัง</h2>

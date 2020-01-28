@@ -277,7 +277,7 @@
 
 
 
-                                                    <form action='chedit.php' method='POST'>
+                                                    <form action='admin-Edit-promotion-page.php' method='POST'>
                                                         <section class="page-section collapse" id="EditDatamovie">
                                                             <div align="center">
                                                                 <div class="card-body row no-gutters align-items-center"style="width: 400px;" >

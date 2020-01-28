@@ -110,7 +110,7 @@ and open the template in the editor.
                                                     </div>
 
                                                     </section>
-                                                    <form action='sentpoint.php' method='POST' >
+                                                    <form action='admin-cinema_county.php' method='POST' >
                                                         <section>
                                                             <div class="container">
                                                                 <h2 class="text-center mt-0">แก้ไขโรงหนัง</h2>
