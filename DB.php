@@ -176,8 +176,9 @@ class connectdb {
         $sql = "INSERT INTO `ticket`(`tid`, `movie`, `date`, `timeshow`, `cinema`, `seat`, `price`) "
                 . "VALUES ('".$mname."','".$mdate."','".$mtime."','".$cname."','".$price."','".$s."')";
         $result = mysqli_query($this->connichdb(), $sql);
-//        echo $sql;
-        header("location:pa.php");
+        if (mysqli_num_rows($result) == 1) {
+            echo 'success';
+        }
 
     }
 }

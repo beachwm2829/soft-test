@@ -19,7 +19,7 @@ and open the template in the editor.
         <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
         <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/minty/bootstrap.min.css" rel="stylesheet" integrity="sha384-9NlqO4dP5KfioUGS568UFwM3lbWf3Uj3Qb7FBHuIuhLoDp3ZgAqPE1/MYLEBPZYM" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <title>หน้าแรก | KAREE Cinema</title>
+        <title>หน้าแรก | Garle Cinema</title>
         <style>
             .mySlides {
                 display: none;
