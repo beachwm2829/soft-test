@@ -181,4 +181,42 @@ class connectdb {
         }
 
     }
+    
+    public function addshowtime($mid,$cid,$time)
+    {
+        $sql = "INSERT INTO `timeshow`(`mid`, `cid`, `timeshow`) VALUES ('".$mid."','".$cid."','".$time."') ";
+        $result = mysqli_query($this->connichdb(), $sql);
+        header("location:manageshowtime.php");
+    }
+    
+    public function deleteshowtime($del)
+    {
+        $sql = "DELETE FROM `timeshow` WHERE tid = ".$del." ";
+        $result = mysqli_query($this->connichdb(), $sql);
+        header("location:manageshowtime.php");
+    }
+    
+    public function checktime($tra)
+    {
+        $sql = "SELECT * FROM `timeshow` WHERE tid='" . $tra . "'";
+        $result = mysqli_query($this->connichdb(), $sql);
+        if (mysqli_num_rows($result) == 1) {
+            $row = mysqli_fetch_array($result);
+            session_start();
+            
+            $_SESSION['tid'] = $row['tid'];
+            
+            header("location:edittimeshow.php");
+            
+        } else {
+            echo $sql;
+        }
+    }
+    
+    public function edittimeshow($mid,$cid,$time)
+    {
+        $sql = "UPDATE `timeshow` SET `mid`= '".$mid."',`cid`= '".$cid."',`timeshow`= '".$time."' WHERE `tid` = ".$_SESSION['tid'];
+        $result = mysqli_query($this->connichdb(), $sql);
+        header("location:manageshowtime.php");
+    }
 }
