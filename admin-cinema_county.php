@@ -210,31 +210,31 @@ and open the template in the editor.
             </section>
         </form>
 
-                                                        <form action='sentdeletepoint.php' method='POST'>
-                                                            <section class="page-section collapse" id="DeleteDatamovie">
-                                                                <div class="container">
-                                                                    <h2 class="text-center mt-0">ลบโรงหนัง</h2>
-                                                                    <hr class="divider my-4">
-                                                                    <div class="row">
-                                                                        <div class="col-sm-4"></div>
-                                                                        <div class="col-sm-7">
-                                                                            <div class="form-group ">
-                                                                                <label for="usr">รหัสโรงหนัง</label>
-                                                                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="ชื่อโรงหนัง" name='Cinema_ID'>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="row">
-                                                                        <div class="col-sm-5"></div>
-                                                                        <div class="col-sm-7">
-                                                                            <div class="form-group ">
-                                                                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="ลบโรงหนัง">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </section>
-                                                        </form>
+        <form action='sentdeletecinema.php' method='POST'>
+            <section class="page-section collapse" id="DeleteDatamovie">
+                <div class="container">
+                    <h2 class="text-center mt-0">ลบโรงหนัง</h2>
+                    <hr class="divider my-4">
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <label for="usr">รหัสโรงหนัง</label>
+                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="ชื่อโรงหนัง" name='Cinema_ID'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="ลบโรงหนัง">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </form>
 
                                                         <form action='admin-Edit-Cinema-page.php' method='POST'>
                                                             <section class="page-section collapse" id="EditDatamovie">
