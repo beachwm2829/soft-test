@@ -6,6 +6,9 @@ $mid=$_POST['mid'];
 $ccode=$_POST['ccode'];
 $cname=$_POST['cname'];
 
+echo $mid;
+echo $ccode;
+echo $cname;
 
 $con=new connectdb();
 $con->connichdb();

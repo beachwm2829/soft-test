@@ -182,7 +182,7 @@ and open the template in the editor.
                         <div class="col-sm-7">
                             <div class="form-group ">
                                 <label for="usr">รหัสโรงหนัง</label>
-                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="รหัสโรงหนัง" name='cocde'>
+                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="รหัสโรงหนัง" name='ccode'>
                             </div>
                         </div>
                     </div>
@@ -191,8 +191,8 @@ and open the template in the editor.
                         <div class="col-sm-4"></div>
                         <div class="col-sm-7">
                             <div class="form-group ">
-                                <label for="usr">=ชื่อโรงหนัง</label>
-                                <input type="text" align="center" style="width: 50%;" class="form-control" placeholder='ชื่อโรงหนัง' name='Cname'>
+                                <label for="usr">ชื่อโรงหนัง</label>
+                                <input type="text" align="center" style="width: 50%;" class="form-control" placeholder='ชื่อโรงหนัง' name='cname'>
                             </div>
                         </div>
                     </div>
