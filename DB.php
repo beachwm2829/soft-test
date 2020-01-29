@@ -232,4 +232,11 @@ class connectdb {
         $result = mysqli_query($this->connichdb(), $sql);
         header("location:manageshowtime.php");
     }
+    
+    public function addcinema($mid,$ccode,$cname)
+    {
+        $sql = "INSERT INTO `cinema`(`mid`, `ccid`, `name`) VALUES ('".$mid."','".$ccode."','".$cname."'])";
+        $result = mysqli_query($this->connichdb(), $sql);
+        header("location:admin-cinema_county.php");
+    }
 }

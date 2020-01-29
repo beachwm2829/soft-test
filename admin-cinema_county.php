@@ -163,52 +163,52 @@ and open the template in the editor.
                                                         </div>
                                                         </section>
 
-                                                        <form action='sentpoint.php' method='POST' >
-                                                            <section class="page-section collapse" id="addDatamovie">
-                                                                <div class="container">
-                                                                    <h2 class="text-center mt-0">เพิ่มโรงหนัง</h2>
-                                                                    <hr class="divider my-4">
-                                                                    <div class="row">
-                                                                        <div class="col-sm-4"></div>
-                                                                        <div class="col-sm-7">
-                                                                            <div class="form-group ">
-                                                                                <label for="usr">รหัสโรงหนัง</label>
-                                                                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="ชื่อโรงหนัง" name='Cinema_ID'>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="row">
-                                                                        <div class="col-sm-4"></div>
-                                                                        <div class="col-sm-7">
-                                                                            <div class="form-group ">
-                                                                                <label for="usr">ชื่อโรงหนัง</label>
-                                                                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="ชื่อโรงหนัง" name='Cinema_Name'>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
+        <form action='sentaddcinema.php' method='POST' >
+            <section class="page-section collapse" id="addDatamovie">
+                <div class="container">
+                    <h2 class="text-center mt-0">เพิ่มโรงหนัง</h2>
+                    <hr class="divider my-4">
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <label for="usr">รหัสหนัง</label>
+                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="รหัสหนัง" name='mid'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <label for="usr">รหัสโรงหนัง</label>
+                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="รหัสโรงหนัง" name='cocde'>
+                            </div>
+                        </div>
+                    </div>
 
-                                                                    <div class="row">
-                                                                        <div class="col-sm-4"></div>
-                                                                        <div class="col-sm-7">
-                                                                            <div class="form-group ">
-                                                                                <label for="usr">จังหวัด</label>
-                                                                                <input type="text" align="center" style="width: 50%;" class="form-control" placeholder='จังหวัด' name='Cinema_County'>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <label for="usr">=ชื่อโรงหนัง</label>
+                                <input type="text" align="center" style="width: 50%;" class="form-control" placeholder='ชื่อโรงหนัง' name='Cname'>
+                            </div>
+                        </div>
+                    </div>
 
-                                                                    <div class="row">
-                                                                        <div class="col-sm-5"></div>
-                                                                        <div class="col-sm-7">
-                                                                            <div class="form-group ">
-                                                                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="เพิ่มโรงหนัง">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
+                    <div class="row">
+                        <div class="col-sm-5"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="เพิ่มโรงหนัง">
+                            </div>
+                        </div>
+                    </div>
 
-                                                                </div>
-                                                            </section>
-                                                        </form>
+                </div>
+            </section>
+        </form>
 
                                                         <form action='sentdeletepoint.php' method='POST'>
                                                             <section class="page-section collapse" id="DeleteDatamovie">

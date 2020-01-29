@@ -89,6 +89,7 @@ and open the template in the editor.
                                         <div class="col-sm" align="rigth">
                                             <img src="<?php echo $row["mvImage"] ?>" class="rounded" alt="Cinque Terre">
                                         </div>
+                                        
                                         <div class="col-sm" align="left">
                                             <form action="checksuccen.php" method="post"><div class="col-sm" align="left">
                                             <br><br><br><br><br>
