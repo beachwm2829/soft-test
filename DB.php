@@ -240,4 +240,11 @@ class connectdb {
         header("location:admin-cinema_county.php");
         echo $sql;
     }
+    
+    public function delcinema($cid)
+    {
+         $sql = "DELETE FROM `cinema` WHERE cid = ".$cid." ";
+        $result = mysqli_query($this->connichdb(), $sql);
+        header("location:admin-cinema_county.php");
+    }
 }
