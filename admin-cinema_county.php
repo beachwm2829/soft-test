@@ -236,31 +236,31 @@ and open the template in the editor.
             </section>
         </form>
 
-                                                        <form action='admin-Edit-Cinema-page.php' method='POST'>
-                                                            <section class="page-section collapse" id="EditDatamovie">
-                                                                <div class="container">
-                                                                    <h2 class="text-center mt-0">แก้ไขโรงหนัง</h2>
-                                                                    <hr class="divider my-4">
-                                                                    <div class="row">
-                                                                        <div class="col-sm-4"></div>
-                                                                        <div class="col-sm-7">
-                                                                            <div class="form-group ">
-                                                                                <label for="usr">รหัสโรงหนัง</label>
-                                                                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="ชื่อโรงหนัง" name='Cinema_ID'>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="row">
-                                                                        <div class="col-sm-5"></div>
-                                                                        <div class="col-sm-7">
-                                                                            <div class="form-group ">
-                                                                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="แก้ไขโรงหนัง">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </section>
-                                                        </form>
+        <form action='sentcheckcinema.php' method='POST'>
+            <section class="page-section collapse" id="EditDatamovie">
+                <div class="container">
+                    <h2 class="text-center mt-0">แก้ไขโรงหนัง</h2>
+                    <hr class="divider my-4">
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <label for="usr">IDโรงหนัง</label>
+                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="IDโรงหนัง" name='cid'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5"></div>
+                        <div class="col-sm-7">
+                            <div class="form-group ">
+                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="แก้ไขโรงหนัง">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </form>
 
                                                         <div class="dorne-clients-area section-padding-100">
                                                             <div class="container-fluid">

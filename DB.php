@@ -243,7 +243,31 @@ class connectdb {
     
     public function delcinema($cid)
     {
-         $sql = "DELETE FROM `cinema` WHERE cid = ".$cid." ";
+         $sql = "DELETE FROM `cinema` WHERE `cid` = ".$cid." ";
+        $result = mysqli_query($this->connichdb(), $sql);
+        header("location:admin-cinema_county.php");
+        echo $sql;
+    }
+    
+    public function checkcunema($cid)
+    {
+        $sql = "SELECT * FROM `cinema` WHERE cid='" . $cid . "'";
+        $result = mysqli_query($this->connichdb(), $sql);
+        if (mysqli_num_rows($result) == 1) {
+            $row = mysqli_fetch_array($result);
+            
+            $_SESSION['CID'] = $row['cid'];
+            
+            header("location:admin-Edit-Cinema-page.php");
+            
+        } else {
+            echo $sql;
+        }
+    }
+    
+    public function editcinema($mid,$ccode,$cname)
+    {
+        $sql = "UPDATE `cinema` SET `mid`=".$mid.",`ccid`='".$ccode."',`name`='".$cname."' WHERE cid = ". $_SESSION['CID'];
         $result = mysqli_query($this->connichdb(), $sql);
         header("location:admin-cinema_county.php");
     }
