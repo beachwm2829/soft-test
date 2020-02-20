@@ -24,6 +24,9 @@
     </head>
 
     <body>
+        <script src="js/block.js">
+
+        </script>
         <form>
 
         </form>
@@ -98,7 +101,7 @@
                                                 </div>
                                                 </section>
 
-                                                <form action='sentaddmovice.php' method='POST' enctype="multipart/form-data" >
+                                                <form action='sentaddmovice.php' method='POST' enctype="multipart/form-data" name="formjs" >
                                                     <section class="page-section collapse" id="addDatamovie">
                                                         <div class="container">
                                                             <h2 class="text-center mt-0">เพิ่มข้อมูลหนัง</h2>
@@ -137,7 +140,7 @@
                                                                 <div class="col-sm-4"></div>
                                                                 <div class="col-sm-7">
                                                                     <div class="form-group ">
-                                                                        <label for="usr">ลายละเอียดหยัง</label>
+                                                                        <label for="usr">รายละเอียดหนัง</label>
                                                                         <input type="text" align="center" style="width: 50%;" class="form-control" name="detail" id="usr">
                                                                     </div>
                                                                 </div>
@@ -165,7 +168,7 @@
                                                                 <div class="col-sm-5"></div>
                                                                 <div class="col-sm-7">
                                                                     <div class="form-group ">
-                                                                        <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="Send">
+                                                                        <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="Send" onclick="return addmovie()">
                                                                     </div>
                                                                 </div>
                                                             </div>

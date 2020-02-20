@@ -24,6 +24,9 @@
     </head>
 
     <body>
+        <script src="js/block.js">
+
+        </script>
         <form>
 
         </form>
@@ -77,7 +80,7 @@
                                                 </div>
             
                                                 <br>
-                                                <form action='senteditmov.php' method='POST' >
+                                                <form action='senteditmov.php' method='POST' name="formjs">
                                                     <section >
                                                         <div class="container">
                                                             <h2 class="text-center mt-0">แก้ไขข้อมูลหนัง</h2>
@@ -144,7 +147,7 @@
                                                                 <div class="col-sm-5"></div>
                                                                 <div class="col-sm-7">
                                                                     <div class="form-group ">
-                                                                        <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="Send">
+                                                                        <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="Send" onclick="return addmovie()">
                                                                     </div>
                                                                 </div>
                                                             </div>

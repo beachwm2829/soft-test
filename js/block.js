@@ -59,5 +59,48 @@
                     return false;
                 }
         }
-     
+        function addmovie(){
+            var Date = document.formjs.Date_in.value;
+            var time = document.formjs.time_movie.value;
+            var Moviename = document.formjs.Moviename.value;
+            var detail = document.formjs.detail.value;
+            var group = document.formjs.group_movie.value;
+            var num = /^[0-9/.-]+$/;
+            if( Date == "" && time == "" && Moviename == "" && detail == ""){
+                    alert("กรอกไม่ครบ");
+                    return false;
+                }
+                else if(Date == ""){
+                     alert("ไม่ระบุวันที่เข้าฉาย");
+                     return false;
+                }
+                else if(time == ""){
+                     alert("ไม่ระบุเวลาที่เข้าฉาย");
+                     return false;
+                }
+                else if(Moviename == ""){
+                     alert("ไม่กรอกชื่อหนัง");
+                     return false;
+                }
+                else if(detail == ""){
+                     alert("ไม่กรอกรายระเอียดหนัง");
+                     return false;
+                }
+                else if(group == ""){
+                     alert("ไม่ได้ระบุกลุ่มของหนัง");
+                     return false;
+                }
+                else{
+                    if(Date.match(num)){}
+                    else{
+                        alert("ใส่วันเข้าฉายให้ถูกอักขระ ว/ด/ป ตัวอย่าง 12/1/2020");
+                        return false;
+                    }
+                    if(time.match(num)){}
+                    else{
+                        alert("ใส่เวลาเข้าฉายให้ถูกอักขระ 24hr ตัวอย่าง 13.30");
+                        return false;
+                    }
+                }
+        }
 
