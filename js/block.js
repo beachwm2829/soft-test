@@ -187,6 +187,7 @@
                  var Cinema_Name = document.formjs.Cinema_Name.value;
                  var Cinema_County = document.formjs.Cinema_County.value;
                  var num = /^[A-Za-zก-ฮะ-ูเ-์]+$/;
+                 var num1 = /^[0-9]+$/;
                 if( Cinema_ID == "" && Cinema_Name == "" && Cinema_County==""){
                     alert("กรุณากรอกข้อมูล");
                     return false;
@@ -204,9 +205,18 @@
                      return false;
                 }
                  else{
-                    if(Cinema_ID.match(num)&&Cinema_Name.match(num)&&Cinema_County.match(num)){}
+                    if(Cinema_Name.match(num)&&Cinema_County.match(num)){
+                        
+                    }
                     else{
-                        alert("อย่ากรอกตัวเลข");
+                        alert("ชื่อโรงหนังเเละจังหวัดอย่ากรอกตัวเลข");
+                        return false;
+                    }
+                    if(Cinema_ID.match(num1)){
+                        
+                    }
+                    else{
+                        alert("รหัสโรงหนังเป็นตัวเลขเท่านั้น");
                         return false;
                     }
         }

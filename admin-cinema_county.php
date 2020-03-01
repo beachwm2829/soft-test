@@ -181,7 +181,7 @@ and open the template in the editor.
                                                                         <div class="col-sm-7">
                                                                             <div class="form-group ">
                                                                                 <label for="usr">รหัสโรงหนัง</label>
-                                                                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="ชื่อโรงหนัง" name='Cinema_ID'>
+                                                                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="รหัสโรงหนัง" name='Cinema_ID'>
                                                                             </div>
                                                                         </div>
                                                                     </div>
