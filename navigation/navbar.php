@@ -1,4 +1,15 @@
-
+<?php
+    $dbhost = "localhost";
+    $dbuser = "root";
+    $dbpassword = "";
+    $db = "db_tester";
+    $conn = new mysqli($dbhost, $dbuser, $dbpassword, $db)or
+        die("Connect failed: %s\n" . $conn->erro);
+    mysqli_set_charset($conn, "utf8");
+    $sql = "SELECT * FROM `member` WHERE mUser = '".$_SESSION['id']."'";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_array($result);
+?>
 <header class="header_area" id="header">
     <div class="container-fluid h-100">
         <div class="row h-100">
@@ -10,7 +21,7 @@
                     <div class="collapse navbar-collapse" id="dorneNav">
                         <ul class="navbar-nav mr-auto" id="dorneMenu">
                             <li class="nav-item active">
-                                <a class="nav-link" href="index.php">หน้าแรก <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="index.php">หน้าแรก</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ภาพยนตร์</a>
@@ -26,15 +37,18 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="promotion.php">โปรโมชั่น</a>
                             </li>
-                        </ul>
-                        <!-- Search btn -->
-
-                        <!-- Signin btn -->
-                        <div class="dorne-signin-btn">
-                            <!-- D:\Bitnami\apache2\htdocs\softtesst\navigation\login.php -->
-                            <a href="login.php">ออกจากระบบ</a>
+                        </ul> 
+                        <div class="dorne-signin-btn ">
+                            <li class="nav-item dropdown navbar-nav">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $row['mName']; ?></a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="profile.php">โปรไฟล์</a>
+                                    <a class="dropdown-item" href="logout.php">ออกจากระบบ</a>
+                                </div>
+                            </li>
+                            <!--<a href="logout.php">ออกจากระบบ</a>-->
                         </div>
-                        <!-- Add listings btn -->
+                   
 
                     </div>
                 </nav>

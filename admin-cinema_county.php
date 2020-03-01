@@ -51,7 +51,12 @@ and open the template in the editor.
 
     <body>
         <?php
-        include './navigation/navbar_admin.php';
+        session_start();
+        if(!isset($_SESSION["id"])){
+            include './navigation/navbar-login.php';     
+        }else{
+            include './navigation/navbar_admin.php';      
+        }
         $dbhost = "localhost";
         $dbuser = "root";
         $dbpassword = "";
@@ -163,104 +168,104 @@ and open the template in the editor.
                                                         </div>
                                                         </section>
 
-        <form action='sentaddcinema.php' method='POST' >
-            <section class="page-section collapse" id="addDatamovie">
-                <div class="container">
-                    <h2 class="text-center mt-0">เพิ่มโรงหนัง</h2>
-                    <hr class="divider my-4">
-                    <div class="row">
-                        <div class="col-sm-4"></div>
-                        <div class="col-sm-7">
-                            <div class="form-group ">
-                                <label for="usr">รหัสหนัง</label>
-                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="รหัสหนัง" name='mid'>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4"></div>
-                        <div class="col-sm-7">
-                            <div class="form-group ">
-                                <label for="usr">รหัสโรงหนัง</label>
-                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="รหัสโรงหนัง" name='ccode'>
-                            </div>
-                        </div>
-                    </div>
+                                                        <form action='sentpoint.php' method='POST' >
+                                                            <section class="page-section collapse" id="addDatamovie">
+                                                                <div class="container">
+                                                                    <h2 class="text-center mt-0">เพิ่มโรงหนัง</h2>
+                                                                    <hr class="divider my-4">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-4"></div>
+                                                                        <div class="col-sm-7">
+                                                                            <div class="form-group ">
+                                                                                <label for="usr">รหัสโรงหนัง</label>
+                                                                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="ชื่อโรงหนัง" name='Cinema_ID'>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-sm-4"></div>
+                                                                        <div class="col-sm-7">
+                                                                            <div class="form-group ">
+                                                                                <label for="usr">ชื่อโรงหนัง</label>
+                                                                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="ชื่อโรงหนัง" name='Cinema_Name'>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
 
-                    <div class="row">
-                        <div class="col-sm-4"></div>
-                        <div class="col-sm-7">
-                            <div class="form-group ">
-                                <label for="usr">ชื่อโรงหนัง</label>
-                                <input type="text" align="center" style="width: 50%;" class="form-control" placeholder='ชื่อโรงหนัง' name='cname'>
-                            </div>
-                        </div>
-                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-sm-4"></div>
+                                                                        <div class="col-sm-7">
+                                                                            <div class="form-group ">
+                                                                                <label for="usr">จังหวัด</label>
+                                                                                <input type="text" align="center" style="width: 50%;" class="form-control" placeholder='จังหวัด' name='Cinema_County'>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
 
-                    <div class="row">
-                        <div class="col-sm-5"></div>
-                        <div class="col-sm-7">
-                            <div class="form-group ">
-                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="เพิ่มโรงหนัง">
-                            </div>
-                        </div>
-                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-sm-5"></div>
+                                                                        <div class="col-sm-7">
+                                                                            <div class="form-group ">
+                                                                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="เพิ่มโรงหนัง">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
 
-                </div>
-            </section>
-        </form>
+                                                                </div>
+                                                            </section>
+                                                        </form>
 
-        <form action='sentdeletecinema.php' method='POST'>
-            <section class="page-section collapse" id="DeleteDatamovie">
-                <div class="container">
-                    <h2 class="text-center mt-0">ลบโรงหนัง</h2>
-                    <hr class="divider my-4">
-                    <div class="row">
-                        <div class="col-sm-4"></div>
-                        <div class="col-sm-7">
-                            <div class="form-group ">
-                                <label for="usr">IDโรงหนัง</label>
-                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="IDโรงหนัง" name='cid'>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-5"></div>
-                        <div class="col-sm-7">
-                            <div class="form-group ">
-                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="ลบโรงหนัง">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </form>
+                                                        <form action='sentdeletepoint.php' method='POST'>
+                                                            <section class="page-section collapse" id="DeleteDatamovie">
+                                                                <div class="container">
+                                                                    <h2 class="text-center mt-0">ลบโรงหนัง</h2>
+                                                                    <hr class="divider my-4">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-4"></div>
+                                                                        <div class="col-sm-7">
+                                                                            <div class="form-group ">
+                                                                                <label for="usr">รหัสโรงหนัง</label>
+                                                                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="ชื่อโรงหนัง" name='Cinema_ID'>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-sm-5"></div>
+                                                                        <div class="col-sm-7">
+                                                                            <div class="form-group ">
+                                                                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="ลบโรงหนัง">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </section>
+                                                        </form>
 
-        <form action='sentcheckcinema.php' method='POST'>
-            <section class="page-section collapse" id="EditDatamovie">
-                <div class="container">
-                    <h2 class="text-center mt-0">แก้ไขโรงหนัง</h2>
-                    <hr class="divider my-4">
-                    <div class="row">
-                        <div class="col-sm-4"></div>
-                        <div class="col-sm-7">
-                            <div class="form-group ">
-                                <label for="usr">IDโรงหนัง</label>
-                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="IDโรงหนัง" name='cid'>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-5"></div>
-                        <div class="col-sm-7">
-                            <div class="form-group ">
-                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="แก้ไขโรงหนัง">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </form>
+                                                        <form action='admin-Edit-Cinema-page.php' method='POST'>
+                                                            <section class="page-section collapse" id="EditDatamovie">
+                                                                <div class="container">
+                                                                    <h2 class="text-center mt-0">แก้ไขโรงหนัง</h2>
+                                                                    <hr class="divider my-4">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-4"></div>
+                                                                        <div class="col-sm-7">
+                                                                            <div class="form-group ">
+                                                                                <label for="usr">รหัสโรงหนัง</label>
+                                                                                <input type="text" align="center" style="width: 50%;" class="form-control"  placeholder="ชื่อโรงหนัง" name='Cinema_ID'>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-sm-5"></div>
+                                                                        <div class="col-sm-7">
+                                                                            <div class="form-group ">
+                                                                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="แก้ไขโรงหนัง">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </section>
+                                                        </form>
 
                                                         <div class="dorne-clients-area section-padding-100">
                                                             <div class="container-fluid">

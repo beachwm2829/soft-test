@@ -24,14 +24,16 @@
     </head>
 
     <body>
-        <script src="js/block.js">
-
-        </script>
         <form>
 
         </form>
         <?php
-        include './navigation/navbar_admin.php';
+        session_start();
+        if(!isset($_SESSION["id"])){
+            include './navigation/navbar-login.php';     
+        }else{
+            include './navigation/navbar_admin.php';      
+        }
         ?>
         <!-- section นี้ เป็น ลิสหนัง -->
         <section class="dorne-about-area section-padding-0-100">
@@ -101,7 +103,7 @@
                                                 </div>
                                                 </section>
 
-                                                <form action='sentaddmovice.php' method='POST' enctype="multipart/form-data" name="formjs" >
+                                                <form action='sentaddmovice.php' method='POST' enctype="multipart/form-data" >
                                                     <section class="page-section collapse" id="addDatamovie">
                                                         <div class="container">
                                                             <h2 class="text-center mt-0">เพิ่มข้อมูลหนัง</h2>
@@ -140,7 +142,7 @@
                                                                 <div class="col-sm-4"></div>
                                                                 <div class="col-sm-7">
                                                                     <div class="form-group ">
-                                                                        <label for="usr">รายละเอียดหนัง</label>
+                                                                        <label for="usr">ลายละเอียดหยัง</label>
                                                                         <input type="text" align="center" style="width: 50%;" class="form-control" name="detail" id="usr">
                                                                     </div>
                                                                 </div>
@@ -168,7 +170,7 @@
                                                                 <div class="col-sm-5"></div>
                                                                 <div class="col-sm-7">
                                                                     <div class="form-group ">
-                                                                        <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="Send" onclick="return addmovie()">
+                                                                        <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="Send">
                                                                     </div>
                                                                 </div>
                                                             </div>

@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
 
     <head>
@@ -29,16 +23,23 @@ and open the template in the editor.
 
     <body>
         <?php
-        include './navigation/navbar.php';
+        session_start();
+        if(isset($_SESSION["id"])){
+            include './navigation/navbar.php';
+            
+        }else{
+            include './navigation/navbar-login.php';      
+        }
         $dbhost = "localhost";
         $dbuser = "root";
         $dbpassword = "";
         $db = "db_tester";
         $conn = new mysqli($dbhost, $dbuser, $dbpassword, $db)or
                 die("Connect failed: %s\n" . $conn->erro);
+
         mysqli_set_charset($conn, "utf8");
         ?>
-
+ 
         <script>
             var myIndex = 0;
             carousel();
@@ -73,27 +74,31 @@ and open the template in the editor.
                                 <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
                                     <h6>คุณต้องการเลือกโรงหนังที่ใกล้กับคุณที่สุด?</h6>
                                     <form action="#" method="get">
+                                        <?php
+                                            $sql = "SELECT * FROM `cinema`";
+                                            $result = mysqli_query($conn, $sql);  
+                                        ?>
                                         <select class="custom-select">
-                                            <option selected>เลือกภูมิภาค</option>
-                                            <option value="1">ภาคเหนือ</option>
-                                            <option value="2">ภาคตะวันออกเฉียงเหนือ</option>
+                                            <option value="0">โรงภาพยนต์ทั้งหมด</option>
+                                            <?php while ($row = mysqli_fetch_array($result)) { 
+                                            echo "<option value=".$row['cid'].">".$row['name']."</option>";
+                                            } ?>
+<!--                                            <option value="2">ภาคตะวันออกเฉียงเหนือ</option>
                                             <option value="3">ภาคกลาง</option>
-                                            <option value="4">ภาคใต้</option>
+                                            <option value="4">ภาคใต้</option>-->
                                         </select>
+                                        <?php
+                                            $sql = "SELECT * FROM `movice`";
+                                            $result = mysqli_query($conn, $sql);  
+                                        ?>   
                                         <select class="custom-select">
-                                            <option selected>เลือกจังหวัด</option>
-                                            <option value="1">บุรีรัมย์</option>
-                                            <option value="2">มหาสารคาม</option>
-                                            <option value="3">ขอนแก่น</option>
+                                            <option selected>ภาพยนต์ทั้งหมด</option>
+                                            <?php while ($row = mysqli_fetch_array($result)) { 
+                                            echo "<option value=".$row['mmid'].">".$row['mvName']."</option>";
+                                            } ?>
                                         </select>
-                                        <select class="custom-select">
-                                            <option selected>วันนี้</option>
-                                            <option value="1">วันนี้</option>
-                                            <option value="2">เร็วๆนี้</option>
-
-                                        </select>
-                                        <button type="submit" class="btn dorne-btn"><i class="fa fa-search pr-2" aria-hidden="true" href="#services"></i>รอบฉาย <button>
-                                                </form>
+                                        <button type="submit" class="btn dorne-btn"><i class="fa fa-search pr-2" aria-hidden="true" href="#services"></i>รอบฉาย </button>
+                                    </form>
                                                 </div>
                                                 </div>
                                                 </div>

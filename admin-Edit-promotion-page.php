@@ -31,7 +31,12 @@ and open the template in the editor.
 
     <body>
         <?php
-        include './navigation/navbar_admin.php';
+        session_start();
+        if(!isset($_SESSION["id"])){
+            include './navigation/navbar-login.php';     
+        }else{
+            include './navigation/navbar_admin.php';      
+        }
         $dbhost = "localhost";
         $dbuser = "root";
         $dbpassword = "";

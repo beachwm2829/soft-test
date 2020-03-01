@@ -34,7 +34,13 @@
         </script>
         <form action='sentlogin.php' method='POST' name="formjs">
             <?php
-            include './navigation/navbar-login.php';
+            session_start();
+            if(isset($_SESSION["id"])){
+                include './navigation/navbar.php';
+
+            }else{
+                include './navigation/navbar-login.php';      
+            }
 
             ini_set('display_errors', 1);
             error_reporting(~0);
