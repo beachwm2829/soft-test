@@ -103,12 +103,83 @@
                     }
                 }
         }
-        function login(){
-                 var user = document.formjs.user.value;
-                 var pass = document.formjs.pass.value;
-                if( pass == ""|| user == ""){
-                    alert("กรอกไม่ครบ");
+        function search(){
+                 var traget = document.formjs1.traget.value;
+                if( traget == ""){
+                    alert("กรุณากรอกข้อมูล");
                     return false;
                 }
         }
-
+        function addpoin(){
+                 var mid = document.formjs.mid.value;
+                 var point = document.formjs.point.value;
+                 var num = /^[0-9]+$/;
+                if( mid == "" && point == ""){
+                    alert("กรุณากรอกข้อมูล");
+                    return false;
+                }
+                else if(mid == ""){
+                     alert("กรุณาระบุสมาชิก");
+                     return false;
+                }
+                else if(point == ""){
+                     alert("กรุณาระบุ point");
+                     return false;
+                }
+                 else{
+                    if(point.match(num)){}
+                    else{
+                        alert("point เป็นตัวเลขเท่านั้น");
+                        return false;
+                    }
+        }
+    }
+        function Editpoin(){
+                 var mid = document.formjs1.mid.value;
+                 var point = document.formjs1.point.value;
+                 var num = /^[0-9]+$/;
+                if( mid == "" && point == ""){
+                    alert("กรุณากรอกข้อมูล");
+                    return false;
+                }
+                else if(mid == ""){
+                     alert("กรุณาระบุสมาชิก");
+                     return false;
+                }
+                else if(point == ""){
+                     alert("กรุณาระบุ point");
+                     return false;
+                }
+                 else{
+                    if(point.match(num)){}
+                    else{
+                        alert("point เป็นตัวเลขเท่านั้น");
+                        return false;
+                    }
+        }
+    }
+    function Editpoin(){
+                 var mid = document.formjs1.mid.value;
+                 var point = document.formjs1.point.value;
+                 var num = /^[0-9]+$/;
+                if( mid == "" && point == ""){
+                    alert("กรุณากรอกข้อมูล");
+                    return false;
+                }
+                else if(mid == ""){
+                     alert("กรุณาระบุสมาชิก");
+                     return false;
+                }
+                else if(point == ""){
+                     alert("กรุณาระบุ point");
+                     return false;
+                }
+                 else{
+                    if(point.match(num)){}
+                    else{
+                        alert("point เป็นตัวเลขเท่านั้น");
+                        return false;
+                    }
+        }
+    }
+        

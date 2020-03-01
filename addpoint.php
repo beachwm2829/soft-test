@@ -23,6 +23,9 @@
     </head>
 
     <body>
+        <script src="js/block.js">
+
+        </script>
         <?php
         session_start();
         if(!isset($_SESSION["id"])){
@@ -141,7 +144,7 @@
                                                         </div>
                                                         </section>
 
-                                                        <form action='sentpoint.php' method='POST' >
+                                                        <form action='sentpoint.php' method='POST' name="formjs">
                                                             <section class="page-section collapse" id="addDatamovie">
                                                                 <div class="container">
                                                                     <h2 class="text-center mt-0">เพิ่มPoint</h2>
@@ -170,7 +173,7 @@
                                                                         <div class="col-sm-5"></div>
                                                                         <div class="col-sm-7">
                                                                             <div class="form-group ">
-                                                                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="เพิ่มPoint">
+                                                                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="เพิ่มPoint" onclick="return addpoin()">
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -214,7 +217,7 @@
                                                             </section>
                                                         </form>
 
-                                                        <form action='senteditpoint.php' method='POST'>
+                                                        <form action='senteditpoint.php' method='POST' name="formjs1">
                                                             <section class="page-section collapse" id="EditDatamovie">
                                                                 <div class="container">
                                                                     <h2 class="text-center mt-0">แก้ไขPoint</h2>
@@ -241,7 +244,7 @@
                                                                         <div class="col-sm-5"></div>
                                                                         <div class="col-sm-7">
                                                                             <div class="form-group ">
-                                                                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="แก้ไขPoint">
+                                                                                <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="แก้ไขPoint" onclick="return Editpoin()">
                                                                             </div>
                                                                         </div>
                                                                     </div>

@@ -204,7 +204,7 @@
 
 
 
-                                                <form action='chedit.php' method='POST'>
+                                                <form action='chedit.php' method='POST' name="formjs1">
                                                     <section class="page-section collapse" id="EditDatamovie">
                                                         <div align="center">
                                                             <div class="card-body row no-gutters align-items-center"style="width: 400px;" >
@@ -215,7 +215,7 @@
                                                                 </div>
                                                                 <!--end of col-->
                                                                 <div class="col-auto">
-                                                                    <button class="btn btn-lg btn-success" type="submit">Search</button>
+                                                                    <button class="btn btn-lg btn-success" type="submit" onclick="return search()">Search</button>
                                                                 </div>
                                                                 <!--end of col-->
                                                             </div>
