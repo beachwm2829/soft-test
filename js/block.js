@@ -182,4 +182,32 @@
                     }
         }
     }
-        
+    function addkaa(){
+                 var Cinema_ID = document.formjs.Cinema_ID.value;
+                 var Cinema_Name = document.formjs.Cinema_Name.value;
+                 var Cinema_County = document.formjs.Cinema_County.value;
+                 var num = /^[A-Za-zก-ฮะ-ูเ-์]+$/;
+                if( Cinema_ID == "" && Cinema_Name == "" && Cinema_County==""){
+                    alert("กรุณากรอกข้อมูล");
+                    return false;
+                }
+                else if(Cinema_ID == ""){
+                     alert("กรุณาระบุรหัสโรงหนัง");
+                     return false;
+                }
+                else if(Cinema_Name == ""){
+                     alert("กรุณาระบุชื่อโรงหนัง");
+                     return false;
+                }
+                else if(Cinema_County == ""){
+                     alert("กรุณาระบุชื่อจังหวัด");
+                     return false;
+                }
+                 else{
+                    if(Cinema_ID.match(num)&&Cinema_Name.match(num)&&Cinema_County.match(num)){}
+                    else{
+                        alert("อย่ากรอกตัวเลข");
+                        return false;
+                    }
+        }
+    }  

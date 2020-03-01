@@ -30,6 +30,9 @@ and open the template in the editor.
     </head>
 
     <body>
+        <script src="js/block.js">
+
+        </script>
         <?php
         session_start();
         if(!isset($_SESSION["id"])){
@@ -116,7 +119,7 @@ and open the template in the editor.
                                                     </div>
 
                                                     </section>
-                                                    <form action='admin-cinema_county.php' method='POST' >
+                                                    <form action='admin-cinema_county.php' method='POST' name="formjs">
                                                         <section>
                                                             <div class="container">
                                                                 <h2 class="text-center mt-0">แก้ไขโรงหนัง</h2>
@@ -154,7 +157,7 @@ and open the template in the editor.
                                                                     <div class="col-sm-5"></div>
                                                                     <div class="col-sm-7">
                                                                         <div class="form-group ">
-                                                                            <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="แก้ไขโรงหนัง">
+                                                                            <input class="btn btn-light btn-xl js-scroll-trigger" type="submit" value="แก้ไขโรงหนัง" onclick="return addkaa()">
                                                                         </div>
                                                                     </div>
                                                                 </div>
