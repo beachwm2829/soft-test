@@ -23,9 +23,6 @@ class connectdb {
             $_SESSION["pass"] = $pass;
             $_SESSION["mid"] = $row["mid"];
             $_SESSION["point"] = $row["mPoint"];
-            //echo 'Login OK!!!';
-            //$row = mysqli_fetch_array($result);
-            //session_start();
             $p = $row['mPosition'];
 //            echo $row['mPosition'];
 //            echo $row['mUser'];
@@ -114,19 +111,10 @@ class connectdb {
         $sql = "SELECT * FROM `movice` WHERE mvName='" . $tg . "'";
         $result = mysqli_query($this->connichdb(), $sql);
         if (mysqli_num_rows($result) == 1) {
-            $row = mysqli_fetch_array($result);
-            
-            $_SESSION['mvn'] = $row['mvName'];
-//            $_SESSION['mvda'] = $row['mvDate'];
-//            $_SESSION['mvde'] = $row['mvDetail'];
-//            $_SESSION['mvt'] = $row['mvTime'];
-//            $_SESSION['mvg'] = $row['mvg'];
-//            $_SESSION['mvi'] = $row['mvImage'];
-            
+            $row = mysqli_fetch_array($result);  
+            $_SESSION['mvn'] = $row['mvName'];          
             header("location:admin-Edit-Movie-page.php");
-            
         } else {
-            //header("location:admin-movie-listplay.php");
             echo $sql;
         }
     }
