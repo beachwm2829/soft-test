@@ -103,4 +103,12 @@
                     }
                 }
         }
+        function login(){
+                 var user = document.formjs.user.value;
+                 var pass = document.formjs.pass.value;
+                if( pass == ""|| user == ""){
+                    alert("กรอกไม่ครบ");
+                    return false;
+                }
+        }
 
